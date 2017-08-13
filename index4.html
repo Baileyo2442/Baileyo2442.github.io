@@ -1,0 +1,154 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+   <!-- Bootstrap and Font Awesome css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<title>avgtesting</title>
+<style>
+#papa1 {position:absolute;z-index: 999;margin: auto;background-color: #fff;opacity:0.9;display:none;width: 180px;height: 10vh;}
+	#papalil1 {display:block;background-color: #fff;width: 464px;height: 20vh;padding: 9px 19px 9px 94px;opacity:0.9;margin-top: 18.95%;margin-left: 34%;}
+@media (max-width:730px){
+	#papa1 {background-color: #fff;display: block;opacity:0.9;position:relative;margin-top:50%;z-index: 999;padding: 4px 14px 3px 12px;width: 245px;height: 16vh;}
+	#papalil1 {background: #f90;display: none;width: 180px;height: 10vh;}
+}
+body {
+  background: black;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #666666;
+  overflow: hidden;
+
+  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+}
+
+#social-sidebar {
+	margin-left: 0;
+	padding: 0;
+	left: 0;
+	position: fixed;
+	top: 23%;
+}
+
+#social-sidebar li:first-child a { border-top-right-radius: 5px; }
+#social-sidebar li:last-child a { border-bottom-right-radius: 5px; }
+
+#social-sidebar a {
+	background: rgba(0, 0, 0, .7);
+	color: #fff;
+  text-decoration: none;
+	display: block;
+	height: 50px;
+	width: 50px;  
+	font-size: 24px;
+	line-height: 50px;
+	position: relative;
+	text-align: center;
+  cursor: pointer;
+}
+
+#social-sidebar a:hover span {
+	left: 120%;
+	opacity: 1;
+}
+
+#social-sidebar a span {
+  font: 12px "Open Sans", sans-serif;
+  text-transform: uppercase;
+	border-radius: 3px;
+	line-height: 24px;
+	left: -100%;
+	margin-top: -16px;
+	opacity: 0;
+	padding: 4px 8px;
+	position: absolute;
+	transition: opacity .3s, left .4s;
+	top: 50%;
+	z-index: -1;
+}
+
+#social-sidebar a span:before {
+	content: "";
+	display: block;
+	height: 8px;
+  width: 8px;
+	left: -4px;
+	margin-top: -4px;
+	position: absolute;
+	top: 50%;
+	transform: rotate(45deg);
+}
+
+#social-sidebar a[class*="twitter"]:hover,
+#social-sidebar a[class*="twitter"] span,
+#social-sidebar a[class*="twitter"] span:before {background: #00aced;}
+
+#social-sidebar a[class*="facebook"]:hover,
+#social-sidebar a[class*="facebook"] span,
+#social-sidebar a[class*="facebook"] span:before {background: #3B5998;}
+
+#social-sidebar a[class*="gplus"]:hover,
+#social-sidebar a[class*="gplus"] span,
+#social-sidebar a[class*="gplus"] span:before {background: #E34429;}
+
+#social-sidebar a[class*="dribbble"]:hover,
+#social-sidebar a[class*="dribbble"] span,
+#social-sidebar a[class*="dribbble"] span:before {background: #ea4c89;}
+
+#social-sidebar a[class*="dropbox"]:hover,
+#social-sidebar a[class*="dropbox"] span,
+#social-sidebar a[class*="dropbox"] span:before {background: #8DC5F2;}
+
+#social-sidebar a[class*="github"]:hover,
+#social-sidebar a[class*="github"] span,
+#social-sidebar a[class*="github"] span:before {background: #9C7A5B;}
+
+#social-sidebar a[class*="evernote"]:hover,
+#social-sidebar a[class*="evernote"] span,
+#social-sidebar a[class*="evernote"] span:before {background: #6BB130;}
+</style>
+</head>
+<body><!---->
+
+
+
+<div id="papa1"><img src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/gw5SXTaxFJf90bL/avgnewlogofinal2.png" alt="" class="img-responsive"></div>
+<div id="papalil1"><img src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/gw5SXTaxFJf90bL/avgnewlogofinal2.png" alt="" class="img-responsive"></div>
+<!---->
+
+
+
+
+
+	<ul id="social-sidebar" style="list-style: none;">
+  <li>
+    <a class="fa fa-home" style="border: 1px solid #000;"><span style='color:#000;font-size:24px;'>Home</span></a>
+  </li>
+  <li>
+    <a class="fa fa-film" style="border: 1px solid #000;"><span style='color:#000;font-size:24px;'>Films</span></a>
+  </li>
+  <li>
+    <a class="fa fa-package" style="border: 1px solid #000;"><span style='color:#000;font-size:24px;'>Packages</span></a>
+  </li>
+  <li>
+    <a class="fa fa-video" style="border: 1px solid #000;"><span style='color:#000;font-size:24px;'>VFX</span></a>
+  </li>
+  <li>
+    <a class="fa fa-photo" style="border: 1px solid #000;"><span style='color:#000;font-size:24px;'>Photography</span></a>
+  </li>
+  <li>
+    <a class="fa fa-vimeo-square" style="border: 1px solid #000;"><span style='color:#f90;font-size:24px;'>Vimeo</span></a>
+  </li>
+  <li>
+    <a class="fa fa-user" style="border: 1px solid #000;"><span style='color:#f90;font-size:24px;'>Contact</span></a>
+  </li>
+</ul>
+</body>
+</html>
