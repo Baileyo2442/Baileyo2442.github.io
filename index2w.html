@@ -1,0 +1,1015 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+   <!-- Bootstrap and Font Awesome css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>avgtesting</title>
+<style>
+
+
+body * {
+  text-shadow: none;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+html,
+body {
+	background-image: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: -1;
+	position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  background: black;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #666666;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: normal;
+  color: #221e1f;
+  line-height: 40px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  color: #221e1f;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin-top: 0px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #aaa;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  font-size: 12px;
+  line-height: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.all {
+  height: 100%;
+  background-image: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; 
+opacity: 1;
+border: none;
+}
+
+.menu {
+  position: absolute;
+  height: 80px;
+  left: 50px;
+  bottom: 40px;
+  display: block;
+  padding: 0 2px;
+  box-sizing: border-box;
+  z-index: 22;
+}
+
+.menu-block {
+  position: relative;
+  height: 100%;
+  float: left;
+  margin-right: 2px;
+}
+
+.menu .logo {
+  height: 80px;
+  max-width: 400px;
+  background-color: black;
+  display: table-cell;
+  vertical-align: middle;
+  transition: 0.6s all;
+}
+
+.menu .logo.current:after {
+  content: '';
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  background-image: url(https://estelacislaghi.com.br/wp-content/themes/estelac/images/img_logo_n.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.menu .logo a {
+  display: block;
+}
+
+.menu .logo a img {
+  /*height: 100%;*/
+  max-height: 80px;
+  max-width: 100%;
+  display: block;
+  padding: 20px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.categories {
+  min-width: 200px;
+  display: table;
+}
+
+.categories a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cat-title {
+  height: 80px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: black;
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  font-size: 28px;
+  font-weight: 100;
+  transition: 0.6s all;
+  cursor: pointer;
+}
+
+.cat-title:after {
+  content: '';
+  position: relative;
+  height: 28px;
+  width: 20px;
+  float: right;
+  margin-left: 20px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%2212%22%20viewBox%3D%220%200%206%2012%22%3E%3Cstyle%3E.a%7Bfill%3A%23ffffff%3B%7D%3C%2Fstyle%3E%3Cpath%20d%3D%22M5.3%204%203%201.7%200.7%204%200%203.3%203%200.3%206%203.3z%22%20class%3D%22a%22%2F%3E%3Cpath%20d%3D%22M3%2011.7%200%208.7%200.7%208%203%2010.3%205.3%208%206%208.7z%22%20class%3D%22a%22%2F%3E%3C%2Fsvg%3E%0A");
+  background-position: 94% 50%;
+  background-size: 8px;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: 2;
+}
+
+.menu-block.current .cat-title {
+  background-color: white;
+  color: black;
+}
+
+.menu-block.current .cat-title:after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%2212%22%20viewBox%3D%220%200%206%2012%22%3E%3Cstyle%3E.a%7Bfill%3A%23000000%3B%7D%3C%2Fstyle%3E%3Cpath%20d%3D%22M5.3%204%203%201.7%200.7%204%200%203.3%203%200.3%206%203.3z%22%20class%3D%22a%22%2F%3E%3Cpath%20d%3D%22M3%2011.7%200%208.7%200.7%208%203%2010.3%205.3%208%206%208.7z%22%20class%3D%22a%22%2F%3E%3C%2Fsvg%3E%0A");
+}
+
+.categories ul {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s all;
+  z-index: 2;
+}
+
+.categories.open ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+.categories li {
+  display: block;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  color: black;
+  font-size: 28px;
+  font-weight: 100;
+}
+
+.categories li:first-child {
+  margin-top: 5px;
+}
+
+.categories li:last-child {
+  margin-bottom: 5px;
+}
+
+.menu .menu-block.square {
+  height: 80px;
+  width: 80px;
+  background-color: black;
+  display: table;
+  vertical-align: middle;
+  transition: 0.6s all;
+}
+
+.menu .menu-block.square.current {
+  background-color: white;
+}
+
+.menu .contact {}
+
+.menu .menu-block.square > a {
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+}
+
+.menu .menu-block.square.current > a {
+  color: black;
+}
+
+.menu .menu-block.square i {
+  height: 20px;
+  width: 20px;
+  display: table;
+  margin: auto;
+  fill: white;
+}
+
+.menu .menu-block.square.current > a {
+  fill: black;
+}
+
+.menu .menu-block.square i.icon-facebook {
+  margin-top: 4px;
+}
+
+.menu .menu-block.square i.icon-instagram {
+  width: 16px;
+  margin-top: 4px;
+}
+
+.icon-facebook svg,
+.icon-instagram svg {
+  height: 16px;
+  width: 16px;
+}
+
+.page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s all;
+  z-index: 1;
+  /*display: none;*/
+}
+
+.page.current {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
+.bg {
+  height: 100%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.swiper-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: absolute;
+  height: 100%;
+  /*display: inline-flex;*/
+  opacity: 0 !important;
+  transition: 0.6s all;
+  z-index: 1;
+}
+
+.swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
+  z-index: 3;
+}
+
+.swiper-card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 0;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: 0.6s box-shadow;
+}
+
+.swiper-card:hover {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-bg {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.card-bg.bgcontain {
+  background-size: contain;
+}
+
+.card-title {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
+  opacity: 0;
+  font-size: 48px;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+  transition: 0.6s all;
+  z-index: 2;
+}
+
+.swiper-slide-active .card-title {
+  margin-left: 0;
+  opacity: 1;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 15px;
+  z-index: 2;
+  display: none !important;
+}
+
+.pagination .swiper-pagination-bullet {
+  height: 6px;
+  width: 6px;
+  border: 2px solid #fafafa;
+  background-color: #221e1f;
+  opacity: 0.1;
+}
+
+.pagination .swiper-pagination-bullet-active {
+  background-color: #221e1f;
+  opacity: 0.5;
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  height: 80px;
+  width: 40px;
+  top: initial;
+  bottom: 40px;
+  opacity: 0.6;
+  background-color: black;
+  background-size: 8px;
+  transition: 0.6s all;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev {
+  display: none;
+}
+
+.page-info {
+  position: absolute;
+  height: 100%;
+  width: 600px;
+  top: 0;
+  left: -560px;
+  /*padding:40px 52px;*/
+  box-sizing: border-box;
+  padding-bottom: 160px;
+  overflow: hidden;
+  background-color: black;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 38px;
+  color: #ffffff;
+  transition: 0.6s all;
+  z-index: 3;
+}
+
+.page-info.open {
+  left: 0px;
+}
+
+.page-info-btn {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  top: 0;
+  right: 0px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 10px;
+  transition: 0.6s all;
+  z-index: 4;
+}
+
+.page-info.open .page-info-btn {
+  right: 10px;
+  transform: rotate(180deg);
+}
+.blink {
+  animation: blink-animation 2s infinite;
+}
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.page-info .swiper-container {
+  text-align: left;
+}
+
+.page-info .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.page-info .swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+  padding: 60px 72px;
+}
+
+.page-info .swiper-container-vertical>.swiper-scrollbar {
+  left: 0;
+  /*opacity:0.4 !important;*/
+}
+
+.page-info .swiper-scrollbar-drag {
+  width: 2px;
+  background: white;
+}
+
+.contact {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact .page-info h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+  color:white;
+  font-weight:100;
+}
+
+.contact .page-info h3:not(:first-child) {
+  margin-top: 10px;
+}
+.contact .page-info p {
+  font-size:18px;
+  line-height: 26px;
+}
+
+.contact-map {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 40px);
+  top: 0;
+  right: 0;
+}
+
+.contact-map iframe {
+  height: 100%;
+  width: 100%;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(99%);
+  -webkit-backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 888px) {
+	#logy {margin-left: 0;}
+  body {
+    overflow-y: auto;
+  }
+  .menu {
+    height: 40px;
+    width: calc(100% - 20px);
+    left: 10px;
+    bottom: 20px;
+    display: block;
+    padding: 0;
+  }
+  .menu-block {
+    width: 100%;
+    float: none;
+    margin-top: 2px;
+  }
+  .menu-block:first-child {
+    margin-top: 0;
+  }
+  .menu .logo {
+    position: relative;
+    height:40px;
+    width: 100%;
+    max-width: none;
+    display: table;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .menu .logo a img {
+    max-height: 30px;
+  }
+  .menu .categories {
+    text-align: center;
+  }
+  .menu .logo.current:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+  }
+  .menu .logo.current:after {
+    height: 30px;
+    width: calc(100% - 20px);
+    top: 10px;
+    left: 10px;
+    background-size: contain;
+  }
+  .menu .logo a {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .menu .logo a img {
+    padding: 0;
+  }
+  .menu .menu-block .cat-title {
+    height:40px;
+    padding:10px;
+  }
+  .menu .menu-block.square {
+    height:40px;
+    width: calc((100% / 3) - 2px);
+    float: left;
+    margin-bottom: 40px;
+  }
+  .page-info {
+    width: 100%;
+    left: calc(-100% + 40px);
+    left: 0;
+    top: calc(-100% + 40px);
+    padding-bottom:100px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .page-info.open {
+    left: 0;
+    top: 0;
+  }
+  .page-info-btn {
+    height: 40px;
+    width: 40px;
+    top: auto;
+    left: 50%;
+    right: auto;
+    bottom: 0;
+    margin-left: -20px;
+    transform: rotate(90deg);
+    cursor:pointer;
+  }
+  .page-info.open .page-info-btn {
+    top: 0;
+    transform: rotate(-90deg);
+  }
+  .page-info .swiper-slide {
+    padding: 40px 20px;
+    text-align:center;
+  }
+  .contact .page-info p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .contact-map {
+    height: calc(100% - 40px);
+    width:100%;
+    top:40px;
+    left:0;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display:none;
+  }
+}
+
+#logoy {
+	background: #fff;
+	background-image: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/gw5SXTaxFJf90bL/avgnewlogofinal2.png);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center; 
+
+}
+
+</style>
+</head>
+<body>
+	<div class="all" >
+  <div class="menu noselect"  >
+    <div class="menu-block logo current" style="margin-top: -4.5vh;">
+      <a href="#" data-page="home"><img src="https://estelacislaghi.com.br/wp-content/themes/estelac/images/img_logo_preto_n.png" /></a>
+    </div>
+    <div class="menu-block categories" style="margin-top: -4.5vh;padding-bottom: 10px;">
+      <div class="cat-title"><a href="#" style="margin-top: -10px;">Menu</a></div>
+      <ul>
+       <!-- <li><a href="#" data-page="Home">Home</a></li>-->
+        <li><a href="#" data-page="Contact">Contact</a></li>
+        <li><a href="#" data-page="light-design">Photography</a></li>
+        <li><a href="#" data-page="VFX Reel">VFX Reel</a></li>
+        <li><a href="#" data-page="Packages">Packages</a></li>
+        <li><a href="#" data-page="Films">Films</a></li>
+      </ul>
+    </div>
+    <div class="menu-block contact square" style="margin-top: -4.5vh;padding-bottom: 10px;"><a href="#" data-page="contact"><span class="material-icons"></span><i class="fa fa-vimeo-square" style="color: #fff;padding: 3px 5px 3px 5px;"></i></a></div>
+    <div class="menu-block facebook square" style="margin-top: -4.5vh;padding-bottom: 10px;"><a href="https://www.facebook.com/Estela-Cislaghi-Arquitetura-Light-Design-202352913232677/" target="_blank"><i class="icon-facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" preserveAspectRatio="xMidYMin slice"><path fill="inherit" d="M8.45 13.85h-2.1V4.28c0-.56.17-1.05.5-1.44.36-.46.9-.7 1.55-.7h3.05v2.1H9.12c-.43 0-.52.08-.53.08-.1.04-.15.15-.15.44v9.1zM11.45 8.25h-6.9v-2.1h6.9v2.1z"></path></svg></i></a></div>
+    <div class="menu-block instagram square" style="margin-top: -4.5vh;padding-bottom: 10px;"><a href="https://www.instagram.com/estelacislaghiarquitetura/" target="_blank"><i class="icon-instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="388 388 24 24"><defs><rect x="388" y="388"/></defs><clipPath><use xlink:href="#SVGID_1_"/></clipPath><path d="M400 390.2c3.2 0 3.6 0 4.8 0.1 1.2 0.1 1.8 0.2 2.2 0.4 0.6 0.2 1 0.5 1.4 0.9 0.4 0.4 0.7 0.8 0.9 1.4 0.2 0.4 0.4 1.1 0.4 2.2 0.1 1.3 0.1 1.6 0.1 4.8s0 3.6-0.1 4.8c-0.1 1.2-0.2 1.8-0.4 2.2 -0.2 0.6-0.5 1-0.9 1.4 -0.4 0.4-0.8 0.7-1.4 0.9 -0.4 0.2-1.1 0.4-2.2 0.4 -1.3 0.1-1.6 0.1-4.8 0.1 -3.2 0-3.6 0-4.8-0.1 -1.2-0.1-1.8-0.2-2.2-0.4 -0.6-0.2-1-0.5-1.4-0.9 -0.4-0.4-0.7-0.8-0.9-1.4 -0.2-0.4-0.4-1.1-0.4-2.2 -0.1-1.3-0.1-1.6-0.1-4.8s0-3.6 0.1-4.8c0.1-1.2 0.2-1.8 0.4-2.2 0.2-0.6 0.5-1 0.9-1.4 0.4-0.4 0.8-0.7 1.4-0.9 0.4-0.2 1.1-0.4 2.2-0.4C396.4 390.2 396.8 390.2 400 390.2M400 388c-3.3 0-3.7 0-4.9 0.1 -1.3 0.1-2.1 0.3-2.9 0.6 -0.8 0.3-1.5 0.7-2.1 1.4 -0.7 0.7-1.1 1.3-1.4 2.1 -0.3 0.8-0.5 1.6-0.6 2.9 -0.1 1.3-0.1 1.7-0.1 4.9 0 3.3 0 3.7 0.1 4.9 0.1 1.3 0.3 2.2 0.6 2.9 0.3 0.8 0.7 1.5 1.4 2.1 0.7 0.7 1.3 1.1 2.1 1.4 0.8 0.3 1.6 0.5 2.9 0.6 1.3 0.1 1.7 0.1 4.9 0.1 3.3 0 3.7 0 4.9-0.1 1.3-0.1 2.2-0.3 2.9-0.6 0.8-0.3 1.5-0.7 2.1-1.4 0.7-0.7 1.1-1.3 1.4-2.1 0.3-0.8 0.5-1.6 0.6-2.9 0.1-1.3 0.1-1.7 0.1-4.9 0-3.3 0-3.7-0.1-4.9 -0.1-1.3-0.3-2.1-0.6-2.9 -0.3-0.8-0.7-1.5-1.4-2.1 -0.7-0.7-1.3-1.1-2.1-1.4 -0.8-0.3-1.6-0.5-2.9-0.6C403.7 388 403.3 388 400 388" clip-path="url(#SVGID_2_)"/><defs><rect x="388" y="388" /></defs><clipPath><use xlink:href="#SVGID_3_"/></clipPath><path d="M400 393.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2c3.4 0 6.2-2.8 6.2-6.2S403.4 393.8 400 393.8M400 404c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4S402.2 404 400 404" clip-path="url(#SVGID_4_)"/><defs><rect x="388" y="388" /></defs><clipPath><use xlink:href="#SVGID_5_"/></clipPath><path d="M407.8 393.6c0 0.8-0.6 1.4-1.4 1.4 -0.8 0-1.4-0.6-1.4-1.4 0-0.8 0.6-1.4 1.4-1.4C407.2 392.2 407.8 392.8 407.8 393.6" clip-path="url(#SVGID_6_)"/></svg></i></a></div>
+  </div>
+  <div class="page home current">
+    <div class="bg noselect">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://images.unsplash.com/photo-1465443313160-ebeac85f54d6?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/themes/estelac/images/home/2.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/themes/estelac/images/home/3.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <div class="page-info noselect" style="background:transparent;">
+    <!---->
+
+    <!---->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+           
+
+
+          </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="page Home">
+    <div class="bg noselect">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/COZINHA-01.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/MG_5243-Editado1.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/MG_6171-FOTO-MARIANA-BORO.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+  <div class="page Contact">
+    <div class="bg noselect">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/43.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/16.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/32.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+  <div class="page light-design">
+    <div class="bg noselect">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/Dn27qo0ROZEtl1ISteTpNm48wVN2LikVE7aYGl53Dbk.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/MG_3741-copy.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/MG_0430-copy.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+  <div class="page VFX Reel">
+    <div class="bg noselect">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/painel-telaio-2.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/aOWaecPeyOYHGD3PuNmoiIQeR09zZBjTKvCfpiUVbuw.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="card-bg" style="background-image:url(https://estelacislaghi.com.br/wp-content/uploads/2012/10/Imagem1.jpg)"></div>
+              <div class="card-title"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+  <div class="page contact">
+    <div class="page-info">
+      <div class="page-info-btn blink"></div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+          
+          </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+   
+  </div>
+</div>
+<div style="text-align: center;">
+<div id="logy" style="margin-left:auto;margin-right: auto;margin-top: -420px;display: block;width: 395px;height: 20vh;position: relative;background-color: #fff;z-index: 99999999;padding: 5px 0 3px 5px;opacity: 0.89;"><img src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/SBa96ztbiDgZeF6/agvlogoheader.png" alt="" class="img-responsive"></div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script>
+$("body").on("click", function() {
+  $(".categories").removeClass("open");
+  $(".page.current .page-info").removeClass("open");
+});
+$(".menu .logo a").on("click", function(e) {
+  e.stopPropagation();
+  $(".page").removeClass("current");
+  var page = $(this).attr("data-page");
+  $("." + page).addClass("current");
+  $(".menu-block").removeClass("current");
+  $(this).parents(".menu-block").addClass("current");
+  $(".categories").removeClass("open");
+  $(".cat-title").text("Menu");
+});
+$(".menu .cat-title").on("click", function(e) {
+  e.stopPropagation();
+  //$('.menu-block').removeClass('current');
+  $(this).parents(".categories").addClass("open");
+});
+$(".menu .categories li a").on("click", function(e) {
+  e.stopPropagation();
+  $(".menu-block").removeClass("current");
+  $(".categories").removeClass("open").addClass("current");
+  $(".cat-title").text($(this).text());
+  $(".page").removeClass("current");
+  var page = $(this).attr("data-page");
+  $("." + page).addClass("current");
+  TweenMax.delayedCall(4, delayedOpen);
+});
+$(".menu .menu-block.square a").on("click", function(e) {
+  if ($(this).attr("target") == "_blank") {
+  } else {
+    e.stopPropagation();
+    $(".menu-block").removeClass("current");
+    $(".categories").removeClass("open").removeClass("current");
+    $(".cat-title").text("Menu");
+    $(".page").removeClass("current");
+    var page = $(this).attr("data-page");
+    $("." + page).addClass("current");
+  }
+});
+
+$(".bg .swiper-container").each(function() {
+  new Swiper($(this), {
+    effect: "fade",
+    speed: 1000,
+    autoplay: 6000,
+    autoplayDisableOnInteraction: false,
+    pagination: $(this).find(".pagination"),
+    paginationClickable: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    grabCursor: true,
+    onPaginationRendered: function(swiper, paginationContainer) {
+      var numberOfBullets = swiper.params.loop
+        ? Math.ceil(
+            (swiper.slides.length - swiper.loopedSlides * 2) /
+              swiper.params.slidesPerGroup
+          )
+        : swiper.snapGrid.length;
+      //console.log('numberOfBullets: '+numberOfBullets);
+      if (numberOfBullets < 2) {
+        swiper.paginationContainer.css({ display: "none" });
+      } else {
+        swiper.paginationContainer.css({ display: "block" });
+      }
+    },
+    nextButton: $(this).find(".swiper-button-next"),
+    prevButton: $(this).find(".swiper-button-prev")
+  });
+});
+$(".bg .swiper-container").on("slideChangeStart", function() {
+  //console.log('slide change start');
+  $(".bg .swiper-slide-next").addClass("swiper-slide-active");
+});
+/* Trick to fix clickable links in Slides */
+$(".bg .swiper-container .swiper-slide a").bind("click", function() {
+  window.open($(this).attr("target"), "_blank");
+});
+
+TweenMax.delayedCall(4, delayedOpen);
+
+function delayedOpen() {
+  if ($(window).width() > 888) {
+    $(".page.current .page-info").addClass("open");
+  }
+}
+
+$(".page-info").on("click", function(e) {
+  e.stopPropagation();
+});
+$(".page-info-btn").on("click", function(e) {
+  e.stopPropagation();
+  $(this).parents(".page-info").toggleClass("open");
+});
+
+$(".page-info .swiper-container").each(function() {
+  new Swiper($(this), {
+    scrollbar: $(this).find(".swiper-scrollbar"),
+    direction: "vertical",
+    slidesPerView: "auto",
+    mousewheelControl: true,
+    freeMode: true
+  });
+});
+
+	
+</script>
+</html>
