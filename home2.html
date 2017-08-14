@@ -18,9 +18,20 @@
 
 body {
   background: #fff;
-  height: 100%;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
   font-family: 'logieFont';
+ 
 }
+#bgimg1 {  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  }
 
 p {
   line-height: 1.5;
@@ -141,10 +152,13 @@ nav li {
   background: #222;
   color: #fff;
   font-family: "logieFont";
+  opacity: 1;
 }
 
 nav li:hover {
-  background: #364e41;
+  background: url(https://image.freepik.com/free-vector/pattern-of-ornamental-watercolor-shapes_23-2147665475.jpg);
+
+
 }
 
 nav.in li:nth-child(1) {
@@ -237,12 +251,12 @@ nav.in li {
 }
 
 .header {
-  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+  /*background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
   background-size: cover;
-  position: relative;
+  position: relative;*/
   width: 100%;
-  min-height: 100%;
-  top: 0px;
+  min-height: 100vh;
+  top: 0;
 }
 
 .header h1 {
@@ -276,6 +290,7 @@ nav.in li {
 </style>
 </head>
 <body>
+<div id="bgimg1"></div>
 	<div id="nav-trigger" class="nav-trigger open">
   <span class="line"></span>
   <span class="line"></span>
@@ -284,11 +299,11 @@ nav.in li {
 <nav id="nav" class="out">
   <ul>
    
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #fff;'>Films</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #fff;'>Packages</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #fff;'>VFX</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #fff;'>Photography</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #fff;'>Contact</a></span></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Films</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Packages</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>VFX</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Photography</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Contact</a></span></span></li>
 
   </ul>
 </nav>
