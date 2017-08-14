@@ -279,13 +279,87 @@ nav.in li {
   margin: 0 auto;
 }
 
-.credit {
-  color: #364e41;
-}
 
-.credit a {
-  color: #364e41;
-}
+/*start social tabs */
+         ul.social-network {
+                        list-style: none;
+                        display: inline;
+                        margin-top:2px;
+                        margin-left:0; !important;
+                        padding: 0;
+                        size:auto;
+                        
+                    }
+                    ul.social-network li {
+                        display: inline;
+                        margin: 0 5px;
+                    }
+                    /* footer social icons */
+                    .social-network a.icoRss:hover {
+                        background-color: #F56505;
+                    }
+                    .social-network a.icoFacebook:hover {
+                        background-color:#3B5998;
+                    }
+                    .social-network a.icoTwitter:hover {
+                        background-color:#33ccff;
+                    }
+                    .social-network a.icoGoogle:hover {
+                        background-color:#BD3518;
+                    }
+                    .social-network a.icoVimeo:hover {
+                        background-color:#0590B8;
+                    }
+                    .social-network a.icoLinkedin:hover {
+                        background-color:#007bb7;
+                    }
+                    .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+                    .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+                        color:#fff;
+                    }
+                    a.socialIcon:hover, .socialHoverClass {
+                        color:#44BCDD;
+                    }
+                    .social-circle li a {
+                        display:inline-block;
+                        position:relative;
+                        margin:0 auto 0 auto;
+                        -moz-border-radius:50%;
+                        -webkit-border-radius:50%;
+                        border-radius:50%;
+                        text-align:center;
+                        width: 50px;
+                        height: 50px;
+                        font-size:20px;
+                    }
+                    .social-circle li i {
+                        margin:0;
+                        line-height:50px;
+                        text-align: center;
+                    }
+                    .social-circle li a:hover {
+                        -moz-transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        -ms--transform: rotate(360deg);
+                        transform: rotate(360deg);
+                        -webkit-transition: all 0.2s;
+                        -moz-transition: all 0.2s;
+                        -o-transition: all 0.2s;
+                        -ms-transition: all 0.2s;
+                        transition: all 0.2s;
+                    }
+                    .social-circle i {
+                        color: #fff;
+                        -webkit-transition: all 0.8s;
+                        -moz-transition: all 0.8s;
+                        -o-transition: all 0.8s;
+                        -ms-transition: all 0.8s;
+                        transition: all 0.8s;
+                    }
+                    a {
+                     background:transparent;;   
+                    }
+
 
 </style>
 </head>
@@ -309,6 +383,20 @@ nav.in li {
 </nav>
 <section id="header" class="header">
   <h1 style="text-align: center;" id="heading"><img src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/gw5SXTaxFJf90bL/avgnewlogofinal2.png" alt="logow" class="img-responsive" style="margin: auto;background-color: #fff;opacity: 0.9;border: 41px solid #fff;padding: 0 50px 17px 50px;"></h1>
+  <div id="holdersoc">
+  	<div id="holdersmall" style="margin: auto;text-align: center;">
+  		<ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
+                       <!-- <li><a href="tel:(630)402-5598" class="icoRss" title="Phone"><i class="fa fa-phone"></i></a></li>-->
+                        
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
+  
+                        <li><a href="https://www.instagram.com/" class="icoLinkedin" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+
+                        <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+
+        </ul>
+  	</div>
+  </div>
 </section>
 <section class="content">
 
