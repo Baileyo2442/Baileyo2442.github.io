@@ -24,7 +24,7 @@ body {
   font-family: 'logieFont';
  
 }
-#bgimg1 {  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+#bgimg1 {  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/ZSJuRntVijESwGG/avgsitebg2.jpeg);
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;
@@ -360,11 +360,16 @@ nav.in li {
                      background:transparent;;   
                     }
 
-
+.bgmobilepic {position: fixed;z-index: 999999999999999999999;}
+@media (max-width:500px){
+.bgmobilepic {width: 100%;height: 100vh;background: url(avgsitemob.jpg);background-attachment: fixed;background-size: cover;background-repeat: no-repeat;}
+}
 </style>
 </head>
 <body>
+
 <div id="bgimg1"></div>
+ <div class="bgmobilepic" ></div>
 	<div id="nav-trigger" class="nav-trigger open">
   <span class="line"></span>
   <span class="line"></span>
@@ -373,16 +378,17 @@ nav.in li {
 <nav id="nav" class="out">
   <ul>
    
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='films.html' style ='text-decoration: none;color: #2777;'>Films</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='packages.html' style ='text-decoration: none;color: #2777;'>Packages</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='vfx.html' style ='text-decoration: none;color: #2777;'>VFX</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='photography.html' style ='text-decoration: none;color: #2777;'>Photography</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='contact.html' style ='text-decoration: none;color: #2777;'>Contact</a></span></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Films</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Packages</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>VFX</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Photography</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Contact</a></span></span></li>
 
   </ul>
 </nav>
 <section id="header" class="header">
-  <h1 style="text-align: center;" id="heading"><img id="AVGlogo" src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/gw5SXTaxFJf90bL/avgnewlogofinal2.png" alt="logow" class="img-responsive" style="margin: auto;background-color: #fff;opacity: 0.9;border: 41px solid #fff;padding: 0 50px 17px 50px;"></h1>
+  <h1 style="text-align: center;" id="heading"><img id="AVGlogo" src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/gw5SXTaxFJf90bL/avgnewlogofinal2.png" alt="logow" class="img-responsive" style="margin-top:-15.5vh;margin-left:auto;margin-right: auto;background-color: #fff;opacity: 0.9;border: 41px solid #fff;padding: 0 50px 17px 50px;"></h1>
+ 
   <div id="holdersoc">
   	<div id="holdersmall" style="margin: auto;text-align: center;">
   		<ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
