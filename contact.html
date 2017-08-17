@@ -24,7 +24,7 @@ body {
   font-family: 'logieFont';
  
 }
-#bgimg1 {  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+#bgimg1 {  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/ZSJuRntVijESwGG/avgsitebg2.jpeg);
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;
@@ -745,7 +745,7 @@ section .title {
   </ul>
 </nav>
 <section id="header" class="header">
-  <h1 style="text-align: center;" id="heading"><img id="AVGlogo" src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/gw5SXTaxFJf90bL/avgnewlogofinal2.png" alt="logow" class="img-responsive" style="margin: auto;background-color: #fff;opacity: 0.9;border: 41px solid #fff;padding: 0 50px 17px 50px;"></h1>
+  <h1 style="text-align: center;" id="heading"><img id="AVGlogo" src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/gw5SXTaxFJf90bL/avgnewlogofinal2.png" alt="logow" class="img-responsive" style="margin-top:-16.5vh;margin-left: auto;margin-right: auto;background-color: #fff;opacity: 0.9;border: 41px solid #fff;padding: 0 50px 17px 50px;"></h1>
   <div id="holdersoc">
     <div id="holdersmall" style="margin: auto;text-align: center;">
       <ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
@@ -770,7 +770,7 @@ section .title {
 <div class="row" style="width: 100%;/*background-color: #fff;*/border: 1px solid #fff;margin:auto;">
 <main>
   <section style="position: absolute;z-index: 1;width: 100%;margin: auto;">
-  <div class="title"><span id="viddyo" style="color: #000;padding-top: 200px;">Bailey Oneal</span><span style="color: #222;"> &nbsp;Avante GArde<a target="_blanck" href="#" style="color: #09f;"> Videography</a></span></div>
+  <div class="title"><span id="viddyo" style="color: #000;padding-top: 200px;">Avante Garde</span><span style="color: #222;"> &nbsp; Videography<a target="_blanck" href="#" style="color: #09f;">by Bailey Oneal</a></span></div>
   <div id="uitem">
  <div class="social-buttons" style="margin-top:3vh;">
    <a href="#" class="social-button twitter"><i class="fa fa-vimeo-square"></i></a>
@@ -834,47 +834,6 @@ function navToggle(e) {
 
 window.onload = resize;
 </script>
-<script>
-  (function() {
-  var i, j, len, ref, responsiveVideo, rv,
-    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-  (function() {
-    var logo, logo_css;
-    logo = '#';
- 
-    document.head.insertAdjacentHTML('beforeend', '<style>' + logo_css + '</style>');
-    document.body.insertAdjacentHTML('beforeend', '<a href="https://codepen.io/mican/" target="_blank" class="mM">' + logo + '</a>');
-  })();
-  responsiveVideo = (function() {
-    function responsiveVideo(video) {
-      this.video = video;
-      this.update = bind(this.update, this);
-      if (!this.video) {
-        return;
-      }
-      this.img = new Image(this.video.width, this.video.height);
-      this.img.onload = this.update;
-      this.img.src = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' width%3D'" + this.video.width + "' height%3D'" + this.video.height + "' %2F%3E";
-      this.img.className = "rv-img rv-img-" + (document.querySelectorAll('.rv-img').length + 1);
-      this.img.setAttribute('style', 'position:absolute; top:0; left:0; opacity:0; pointer-events:none; width: auto; height: auto; max-width: 100%;');
-      this.video.parentNode.setAttribute('style', 'position:relative; padding:0;');
-      this.video.parentNode.appendChild(this.img);
-      window.addEventListener('resize', this.update);
-    }
-    responsiveVideo.prototype.update = function() {
-      var ref;
-      return ref = [this.img.width, this.img.height], this.video.width = ref[0], this.video.height = ref[1], ref;
-    };
-    return responsiveVideo;
-  })();
-  ref = document.querySelectorAll('.rv');
-  for (i = j = 0, len = ref.length; j < len; i = ++j) {if (window.CP.shouldStopExecution(1)){break;}
-    rv = ref[i];
-    window["rv" + i] = new responsiveVideo(rv);
-  }
-window.CP.exitedLoop(1);
-}).call(this);
 
-</script>
 </body>
 </html>
