@@ -1,0 +1,912 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+   <!-- Bootstrap and Font Awesome css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>were</title>
+
+<style>
+@font-face {
+    font-family: "logieFont";
+    src: url(Gilroy-ExtraBold.otf);
+}
+
+body {
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  font-family: 'logieFont';
+ 
+}
+#bgimg1 {  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  }
+
+p {
+  line-height: 1.5;
+}
+
+.nav-trigger {
+  position: fixed;
+  width: 110px;
+  height: 98px;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  z-index: 200;
+  -webkit-transform-origin: 110px 0px;
+  -moz-transform-origin: 110px 0px;
+  -ms-transform-origin: 110px 0px;
+  -o-transform-origin: 110px 0px;
+  transform-origin: 110px 0px;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+.nav-trigger.open {
+  background: #222;
+}
+
+.nav-trigger.close {
+  background: transparent;
+}
+
+.line {
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 8px;
+  background: #fff;
+  left: 15px;
+  -webkit-transform-origin: 0px 4px;
+  -moz-transform-origin: 0px 4px;
+  -ms-transform-origin: 0px 4px;
+  -o-transform-origin: 0px 4px;
+  transform-origin: 0px 4px;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.line:nth-child(1) {
+  top: 16px;
+}
+
+.line:nth-child(2) {
+  top: 44px;
+}
+
+.line:nth-child(3) {
+  top: 72px;
+}
+
+.close .line:nth-child(1) {
+  -webkit-transform: translateX(11px) rotate(45deg);
+  -moz-transform: translateX(11px) rotate(45deg);
+  -ms-transform: translateX(11px) rotate(45deg);
+  -o-transform: translateX(11px) rotate(45deg);
+  transform: translateX(11px) rotate(45deg);
+}
+
+.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+.close .line:nth-child(3) {
+  -webkit-transform: translateX(11px) rotate(-45deg);
+  -moz-transform: translateX(11px) rotate(-45deg);
+  -ms-transform: translateX(11px) rotate(-45deg);
+  -o-transform: translateX(11px) rotate(-45deg);
+  transform: translateX(11px) rotate(-45deg);
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+nav.out {
+  pointer-events: none;
+}
+
+nav.in {
+  pointer-events: auto;
+}
+
+nav ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+nav li {
+  height: 20%;
+  position: relative;
+  background: #222;
+  color: #fff;
+  font-family: "logieFont";
+  opacity: 1;
+}
+
+nav li:hover {
+  background: url(https://image.freepik.com/free-vector/pattern-of-ornamental-watercolor-shapes_23-2147665475.jpg);
+
+
+}
+
+nav.in li:nth-child(1) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+}
+
+nav.in li:nth-child(2) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
+}
+
+nav.in li:nth-child(3) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
+}
+
+nav.in li:nth-child(4) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
+}
+
+nav.in li:nth-child(5) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+}
+
+nav.out li:nth-child(5) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+}
+
+nav.out li:nth-child(4) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
+}
+
+nav.out li:nth-child(3) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
+}
+
+nav.out li:nth-child(2) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
+}
+
+nav.out li:nth-child(1) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
+}
+
+nav.out li {
+  -webkit-transform: translateY(300%);
+  -moz-transform: translateY(300%);
+  -ms-transform: translateY(300%);
+  -o-transform: translateY(300%);
+  transform: translateY(300%);
+  opacity: 0;
+}
+
+nav.in li {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav-label {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  text-transform: uppercase;
+}
+
+.header {
+  /*background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
+  background-size: cover;
+  position: relative;*/
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+}
+
+.header h1 {
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  margin: 0;
+  font-family: "logieFont";
+  text-align: center;
+  display: block;
+  top: 50%;
+}
+
+.content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+
+/*start social tabs */
+         ul.social-network {
+                        list-style: none;
+                        display: inline;
+                        margin-top:2px;
+                        margin-left:0; !important;
+                        padding: 0;
+                        size:auto;
+                        
+                    }
+                    ul.social-network li {
+                        display: inline;
+                        margin: 0 5px;
+                    }
+                    /* footer social icons */
+                    .social-network a.icoRss:hover {
+                        background-color: #F56505;
+                    }
+                    .social-network a.icoFacebook:hover {
+                        background-color:#3B5998;
+                    }
+                    .social-network a.icoTwitter:hover {
+                        background-color:#33ccff;
+                    }
+                    .social-network a.icoGoogle:hover {
+                        background-color:#BD3518;
+                    }
+                    .social-network a.icoVimeo:hover {
+                        background-color:#0590B8;
+                    }
+                    .social-network a.icoLinkedin:hover {
+                        background-color:#007bb7;
+                    }
+                    .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+                    .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+                        color:#fff;
+                    }
+                    a.socialIcon:hover, .socialHoverClass {
+                        color:#44BCDD;
+                    }
+                    .social-circle li a {
+                        display:inline-block;
+                        position:relative;
+                        margin:0 auto 0 auto;
+                        -moz-border-radius:50%;
+                        -webkit-border-radius:50%;
+                        border-radius:50%;
+                        text-align:center;
+                        width: 50px;
+                        height: 50px;
+                        font-size:20px;
+                    }
+                    .social-circle li i {
+                        margin:0;
+                        line-height:50px;
+                        text-align: center;
+                    }
+                    .social-circle li a:hover {
+                        -moz-transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        -ms--transform: rotate(360deg);
+                        transform: rotate(360deg);
+                        -webkit-transition: all 0.2s;
+                        -moz-transition: all 0.2s;
+                        -o-transition: all 0.2s;
+                        -ms-transition: all 0.2s;
+                        transition: all 0.2s;
+                    }
+                    .social-circle i {
+                        color: #fff;
+                        -webkit-transition: all 0.8s;
+                        -moz-transition: all 0.8s;
+                        -o-transition: all 0.8s;
+                        -ms-transition: all 0.8s;
+                        transition: all 0.8s;
+                    }
+                    a {
+                     background:transparent;;   
+                    }
+
+
+.wrap {
+  margin: auto;
+  width: 100%;
+}
+.main-header {
+  background: #34495E;
+  text-align: center;
+}
+.logo, 
+.main-nav a {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+}
+.main-nav a {
+  padding: 0 .75em;
+  border-right: 1px dotted;
+  color: rgba(255,255,255, .8);
+  font-size: .7em;
+  line-height: 1rem;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
+.main-nav a:last-child {
+  border-right: none;
+}
+.content, 
+.main-header {
+  overflow: hidden;
+}
+.col {
+  height: 240px;
+}
+.main {
+  
+}
+.secondary {
+  background: #2ECC71;
+}
+.extra {
+  display: none;
+  background: #E74C3C;
+}
+.main-footer {
+  background: #95A5A6;
+}
+.main-header, 
+.main-footer, 
+.col {
+  margin-bottom: 15px;
+  padding: 2.15%;
+  border-radius: 5px;
+}
+
+/*==================================
+   Media Queries
+==================================*/
+
+
+/* Phones to Tablets */
+
+@media only screen and (min-width: 481px) {
+  .col {
+    float: left;
+  }
+  .main {
+    width: 65.957446808511%;
+  }
+  .secondary {
+    width: 31.914893617021%; 
+  }
+  .secondary,
+  .extra {
+    margin-left: 2.127659574468%;
+  }
+}
+
+/* Tablets to Desktop */
+
+@media only screen and (min-width: 769px) { 
+  .logo {
+    float: left;
+  }
+  .main-nav {
+    float: right;
+  }
+  .main {
+    width: 40.425531914894%;
+  }
+  .extra {
+    display: block;
+    width: 23.404255319149%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {  
+  .wrap {
+    width: 85%;
+  }
+}
+
+/* @media not screen and (monochrome) {
+  body {
+      background: red; */
+
+
+
+
+
+
+.code-editor:before,
+.code-editor:after,
+.code-editor span.control:before,
+.code-editor span.after:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  content: '';
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: wall .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.code-editor {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 40px auto 0 auto;
+  width: 550px;
+  text-align: left;
+  background-color: #473431;
+  border-radius: 0 0 5px 5px;
+  overflow: auto;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: wall .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.code-editor:before {
+  content: 'Logan Wilson - Entrepreneur';
+  font-family: 'Consolas';
+  color: #222;
+  padding-top: 6px;
+  text-align: center;
+  top: 25px;
+  width: 550px;
+  height: 30px;
+  background-color: #fafafa;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+
+.code-editor span.control:before {
+  content: '';
+  top: 34px;
+  z-index: 2;
+  padding: 6px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+
+.code-editor span.control:nth-child(1):before {
+  margin-left: 15px;
+  background-color: #df6963;
+}
+
+.code-editor span.control:nth-child(2):before {
+  margin-left: 35px;
+  background-color: #f5e18a;
+}
+
+.code-editor span.control:nth-child(3):before {
+  margin-left: 55px;
+  background-color: #97c38a;
+}
+
+/* -- iPad Screen -- */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .code-editor {
+    width: 550px;
+  }
+
+  .code-editor:before {
+    width: 550px;
+  }
+}
+/* -- iPhone Screen -- */
+@media only screen and (max-width: 479px) {
+  .code-editor {
+    width: 300px;
+  }
+
+  .code-editor:before {
+    width: 300px;
+  }
+}
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #ccc;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0em 0;
+  height: 340px;
+  overflow: auto;
+
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #473431;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  -moz-border-radius: .3em;
+  -o-border-radius: .3em;
+  -webkit-border-radius: .3em;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+}
+
+.token.punctuation {
+  color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace {
+  color: #e2777a;
+}
+
+.token.function-name {
+  color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+  color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #cc99cd;
+}
+
+.token.string,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #67cdcc;
+}
+
+.token.important {
+  font-weight: bold;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+pre.line-numbers {
+  position: relative;
+  padding-left: 1em;
+  counter-reset: linenumber;
+  padding-bottom: 1px;
+}
+
+pre.line-numbers > code {
+  position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -13em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  background-color: #322422;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+</style>
+</head>
+<body>
+<div id="bgimg1"></div>
+	<div id="nav-trigger" class="nav-trigger open">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+<nav id="nav" class="out">
+  <ul>
+   
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Films</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Packages</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>VFX</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Photography</a></span></li>
+    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Contact</a></span></span></li>
+
+  </ul>
+</nav>
+<section id="header" class="header">
+   <div class="code-editor"> 
+      <span class="control"></span>
+      <span class="control"></span>
+      <span class="control"></span>
+      <pre class="line-numbers language-css">       <code class=" language-css">
+      <span class="token selector" style="letter-spacing: -4px;">  < ! d o c t y p e  l e g i t  r e s u m é  >  </span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">/* 
+   My curriculum vitae
+   you can contact me on hi@cristinallamas.me
+*/</span>
+
+<span class="token selector">#studies</span><span class="token punctuation">{</span>
+
+  <span class="token selector">.2005</span><span class="token punctuation">{</span>
+    <span class="token property">University_of_Alicante</span><span class="token punctuation">:</span> IT<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.2011</span><span class="token punctuation">{</span>
+    <span class="token selector">.erasmus</span><span class="token punctuation">{</span>
+      <span class="token property">University_of_Gdansk</span><span class="token punctuation">:</span> IT<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#skills </span><span class="token punctuation">{</span>
+
+  <span class="token property">php</span><span class="token punctuation">:</span> 70%<span class="token punctuation">;</span>
+  <span class="token property">jQuery</span><span class="token punctuation">:</span> 20%<span class="token punctuation">;</span>
+  <span class="token property">css</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
+  <span class="token property">sass</span><span class="token punctuation">:</span> 70%<span class="token punctuation">;</span>
+  <span class="token property">html</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
+  <span class="token property">drupal</span><span class="token punctuation">:</span> 6-7<span class="token punctuation">;</span>
+  <span class="token property">UX</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#projects</span><span class="token punctuation">{</span>
+
+  <span class="token selector">.agata_cieslak</span><span class="token punctuation">{</span>
+    <span class="token property">drupal</span><span class="token punctuation">:</span> 7<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("www.agatacieslak.com")</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.dead_letter_records</span><span class="token punctuation">{</span>
+    <span class="token property">drupal</span><span class="token punctuation">:</span> 7 commerce<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("www.deadletterrecords.com")</span><span class="token punctuation">;</span>
+    &amp;<span class="token selector">:before</span><span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> static<span class="token punctuation">;</span>
+      <span class="token property">cms</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>
+  <span class="token selector">.peepsout</span><span class="token punctuation">{</span>
+    <span class="token property">drupal</span><span class="token punctuation">:</span> 7<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("www.peepsout.com")</span><span class="token punctuation">;</span> 
+    <span class="token property">display</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span>// overriden by a wordpress site
+      &amp;<span class="token selector">;:before</span><span class="token punctuation">{</span>
+        <span class="token url">url("www.cristinallamas.me/projects/peepsout")</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#jobs</span><span class="token punctuation">{</span>
+  <span class="token selector">.2011</span><span class="token punctuation">{</span>
+    <span class="token property">freelance</span><span class="token punctuation">:</span>absolute<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>  
+  <span class="token selector">.2012</span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span><span class="token string">"Junior Drupal Developer"</span><span class="token punctuation">;</span>
+    <span class="token property">company</span><span class="token punctuation">:</span><span class="token string">"ATD Travel Services"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</div>
+  <div id="holdersoc">
+  	<div id="holdersmall" style="margin: auto;text-align: center;">
+  		<ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
+                       <!-- <li><a href="tel:(630)402-5598" class="icoRss" title="Phone"><i class="fa fa-phone"></i></a></li>-->
+                        
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
+  
+                        <li><a href="https://www.instagram.com/" class="icoLinkedin" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+
+                        <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+
+        </ul>
+  	</div>
+  </div>
+</section>
+<section class="">
+<div class="wrap">
+    <header class="main-header">
+      <a class="logo" href="#">Logo</a>
+      <nav class="main-nav">
+        <a link href="#">Link 1</a>
+        <a link href="#">Link 2</a>
+        <a link href="#">Link 3</a>
+        <a link href="#">Link 4</a>
+        <a link href="#">Link 5</a>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="main col" style="background-image: url(https://www.twodelighted.com/wp-content/uploads/2012/09/baby-kitty-3.jpg);background-size: cover;">
+        Main
+      </div>
+      <div class="secondary col">
+      
+      </div>
+      <div class="extra col">
+        Extra
+      </div>
+    </div>
+    <footer class="main-footer" style="width: 50%;margin: auto;margin-top: 20px;">
+      Footer
+    </footer>
+  </div>
+ 
+</section>
+
+<script>
+	// selected elements
+var navTrigger = document.getElementById('nav-trigger');
+var nav = document.getElementById('nav');
+var header = document.getElementById('header');
+var heading = document.getElementById('heading');
+var labels = document.getElementsByClassName('nav-label');
+
+// sizing
+var windowHeight = window.innerHeight;
+var windowWidth = window.innerWidth;
+var fontSize = windowHeight*0.01;
+var headingSize = windowWidth*0.1;
+
+// Event Listening
+navTrigger.addEventListener('click', navToggle);
+window.addEventListener('resize', resize);
+
+function resize() {
+  windowHeight = window.innerHeight;
+  windowWidth = window.innerWidth;
+  fontSize = windowHeight*0.1;
+  headingSize = windowWidth*0.1;
+  if(headingSize > windowHeight*0.3) headingSize = windowHeight*0.3; 
+  
+  for(var i = 0; i < labels.length; i++) {
+    labels[i].style.fontSize = fontSize*0.5+'px';
+    labels[i].style.height = fontSize+'px';
+    labels[i].style.marginTop = '-'+fontSize*0.38+'px';
+  }
+
+  header.style.height = windowHeight+'px';
+  heading.style.fontSize = headingSize+'px';
+  heading.style.height = headingSize+'px';
+  heading.style.marginTop = '-'+headingSize*0.6+'px';
+  
+}
+
+function navToggle(e) {
+  var closed = (navTrigger.className.indexOf('close') > 0); 
+  if(closed) {
+    navTrigger.className = 'nav-trigger open';
+    nav.className = 'out';
+  } else {
+    navTrigger.className = 'nav-trigger close';
+    nav.className = 'in';
+  }
+}
+
+window.onload = resize;
+</script>
+
+</body>
+</html>
