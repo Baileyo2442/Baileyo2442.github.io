@@ -490,12 +490,13 @@ nav.in li {
 }
 
 .code-editor {
+
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  margin: 40px auto 0 auto;
-  width: 550px;
+  margin: 130px auto 0 auto;
+  width: 575px;
   text-align: left;
   background-color: #473431;
   border-radius: 0 0 5px 5px;
@@ -512,8 +513,8 @@ nav.in li {
   color: #222;
   padding-top: 6px;
   text-align: center;
-  top: 25px;
-  width: 550px;
+  top: 100px;
+  width: 575px;
   height: 30px;
   background-color: #fafafa;
   border-radius: 5px 5px 0 0;
@@ -524,7 +525,7 @@ nav.in li {
 
 .code-editor span.control:before {
   content: '';
-  top: 34px;
+  top: 110px;
   z-index: 2;
   padding: 6px;
   border-radius: 20px;
@@ -551,11 +552,11 @@ nav.in li {
 /* -- iPad Screen -- */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .code-editor {
-    width: 550px;
+    width: 575px;
   }
 
   .code-editor:before {
-    width: 550px;
+    width: 575px;
   }
 }
 /* -- iPhone Screen -- */
@@ -594,7 +595,7 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   padding: 1em;
   margin: 0em 0;
-  height: 340px;
+  height: 362px;
   overflow: auto;
 
 }
@@ -691,7 +692,7 @@ pre.line-numbers > code {
 .line-numbers .line-numbers-rows {
   position: absolute;
   pointer-events: none;
-  top: 0;
+  top: 100;
   font-size: 100%;
   left: -13em;
   width: 3em;
@@ -721,7 +722,7 @@ pre.line-numbers > code {
 </style>
 </head>
 <body>
-<div id="bgimg1"></div>
+<div id="bgimg1" style="position: fixed;top:0;"></div>
 	<div id="nav-trigger" class="nav-trigger open">
   <span class="line"></span>
   <span class="line"></span>
@@ -738,8 +739,9 @@ pre.line-numbers > code {
 
   </ul>
 </nav>
-<section id="header" class="header">
-   <div class="code-editor"> 
+<section style="text-align: center;margin: auto;"> 
+<div class="row" style="width: 100%;position: relative;margin: auto; z-index:99;margin-top: 12vh;">
+<div class="code-editor">
       <span class="control"></span>
       <span class="control"></span>
       <span class="control"></span>
@@ -747,36 +749,46 @@ pre.line-numbers > code {
       <span class="token selector" style="letter-spacing: -4px;">  < ! d o c t y p e  l e g i t  r e s u m é  >  </span><span class="token punctuation">.</span>
 <span class="token comment" spellcheck="true">/* 
    My curriculum vitae
-   you can contact me on hi@cristinallamas.me
+   you can contact me via Email
+   Loganwilsonis@yahoo.com
 */</span>
 
-<span class="token selector">#studies</span><span class="token punctuation">{</span>
+<span class="token selector" style="color: #e2777a;">#studies</span><span class="token punctuation">{</span>
 
-  <span class="token selector">.2005</span><span class="token punctuation">{</span>
-    <span class="token property">University_of_Alicante</span><span class="token punctuation">:</span> IT<span class="token punctuation">;</span>
+  <span class="token selector">.2010</span><span class="token punctuation">{</span>
+    <span class="token property">James_B_Conant</span><span class="token punctuation">:</span> Graphic Design<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><br>
+  <span class="token selector">.2012</span><span class="token punctuation">{</span>
+    
+      <span class="token property">University_of_Southern_Palatine</span><span class="token punctuation">:</span> Psychology &amp; UX/UI<span class="token punctuation">;</span>
+ 
   <span class="token punctuation">}</span>
-  <span class="token selector">.2011</span><span class="token punctuation">{</span>
-    <span class="token selector">.erasmus</span><span class="token punctuation">{</span>
-      <span class="token property">University_of_Gdansk</span><span class="token punctuation">:</span> IT<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+
+  <span class="token selector">.2016</span><span class="token punctuation">{</span>
+    <span class="token property">The_Youtube_University</span><span class="token punctuation">:</span> HTML, CSS &amp; JS<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><br>
 <span class="token punctuation">}</span>
 
-<span class="token selector">#skills </span><span class="token punctuation">{</span>
+<span class="token selector" style="color: #e2777a;">#skills </span><span class="token punctuation">{</span>
 
-  <span class="token property">php</span><span class="token punctuation">:</span> 70%<span class="token punctuation">;</span>
-  <span class="token property">jQuery</span><span class="token punctuation">:</span> 20%<span class="token punctuation">;</span>
-  <span class="token property">css</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
-  <span class="token property">sass</span><span class="token punctuation">:</span> 70%<span class="token punctuation">;</span>
-  <span class="token property">html</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
-  <span class="token property">drupal</span><span class="token punctuation">:</span> 6-7<span class="token punctuation">;</span>
-  <span class="token property">UX</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">HTML</span><span class="token punctuation">:</span> 95%<span class="token punctuation">;</span>
+  <span class="token property">Final Cut Pro</span><span class="token punctuation">:</span> 89%<span class="token punctuation">;</span>
+  <span class="token property">Adobe Photoshop</span><span class="token punctuation">:</span> 98%<span class="token punctuation">;</span>
+  <span class="token property">CSS</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
+  <span class="token property">Adobe Illustrator</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
+  <span class="token property">Adobe Dreamweaver / Sublime</span><span class="token punctuation">:</span> 97%<span class="token punctuation">;</span>
+  <span class="token property">Javascript</span><span class="token punctuation">:</span> 67%<span class="token punctuation">;</span>
+  <span class="token property">UX/UI</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">Jade/Pug</span><span class="token punctuation">:</span> 60%<span class="token punctuation">;</span>
+  <span class="token property">Social Media Marketing</span><span class="token punctuation">:</span> 98%<span class="token punctuation">;</span>
+  <span class="token property">Branding</span><span class="token punctuation">:</span> 99%<span class="token punctuation">;</span>
+  <span class="token property">Wordpress / Shopify</span><span class="token punctuation">:</span> 76%<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token selector">#projects</span><span class="token punctuation">{</span>
+<span class="token selector" style="color: #e2777a;">#projects &amp; Experience</span><span class="token punctuation">{</span>
 
-  <span class="token selector">.agata_cieslak</span><span class="token punctuation">{</span>
-    <span class="token property">drupal</span><span class="token punctuation">:</span> 7<span class="token punctuation">;</span>
+  <span class="token selector">.<a href='https://www.RentHub.com'>RentHub.com</a></span><span class="token punctuation">{</span>
+    <span class="token property">AWS</span><span class="token punctuation">:</span> 7<span class="token punctuation">;</span>
     <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("www.agatacieslak.com")</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
   <span class="token selector">.dead_letter_records</span><span class="token punctuation">{</span>
@@ -811,32 +823,28 @@ pre.line-numbers > code {
 <span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 </div>
-  <div id="holdersoc">
-  	<div id="holdersmall" style="margin: auto;text-align: center;">
-  		<ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
+</div><!--/end row-->
+</section>
+ <!-- <div id="holdersoc">
+    <div id="holdersmall" style="margin: auto;text-align: center;">
+      <ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
                        <!-- <li><a href="tel:(630)402-5598" class="icoRss" title="Phone"><i class="fa fa-phone"></i></a></li>-->
                         
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
+                     <!--   <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
   
                         <li><a href="https://www.instagram.com/" class="icoLinkedin" title="Instagram"><i class="fa fa-instagram"></i></a></li>
 
-                        <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li> -->
 
         </ul>
-  	</div>
+    </div>
   </div>
 </section>
 <section class="">
 <div class="wrap">
     <header class="main-header">
       <a class="logo" href="#">Logo</a>
-      <nav class="main-nav">
-        <a link href="#">Link 1</a>
-        <a link href="#">Link 2</a>
-        <a link href="#">Link 3</a>
-        <a link href="#">Link 4</a>
-        <a link href="#">Link 5</a>
-      </nav>
+ 
     </header>
     <div class="content">
       <div class="main col" style="background-image: url(https://www.twodelighted.com/wp-content/uploads/2012/09/baby-kitty-3.jpg);background-size: cover;">
@@ -907,6 +915,22 @@ function navToggle(e) {
 
 window.onload = resize;
 </script>
+<!-- <section id="header" class="header">
+   
+ <!-- <div id="holdersoc">
+    <div id="holdersmall" style="margin: auto;text-align: center;">
+      <ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
+                       <!-- <li><a href="tel:(630)402-5598" class="icoRss" title="Phone"><i class="fa fa-phone"></i></a></li>-->
+                        
+                     <!--   <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
+  
+                        <li><a href="https://www.instagram.com/" class="icoLinkedin" title="Instagram"><i class="fa fa-instagram"></i></a></li>
 
+                        <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li> -->
+
+        </ul>
+    </div>
+  </div>
+</section> -->
 </body>
 </html>
