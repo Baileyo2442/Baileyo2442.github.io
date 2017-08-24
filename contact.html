@@ -726,7 +726,6 @@ section .title {
 
 @media (max-width:508px){
 
-  #AVGlogo {padding-left: 0 !important;}
 
 }
 </style>
@@ -771,127 +770,6 @@ section .title {
 </section>
 
 
- 
-<div class="row" style="width: 100%;/*background-color: #fff;*/border: 1px solid #fff;margin:auto;/">
-<main>
- <h2 style="position:relative; color:#5E3642;text-decoration:underline;">VFX</h2>
- 
-   <figure class='video' style="margin-top:96px;">
-    <iframe allowfullscreen='' class='rv' frameborder='0' height='360' mozallowfullscreen='' src='https://player.vimeo.com/video/230097902' webkitallowfullscreen='' width='640'></iframe>
-  </figure>
-  </main>
-</div>
-
-<script>
-  // selected elements
-var navTrigger = document.getElementById('nav-trigger');
-var nav = document.getElementById('nav');
-var header = document.getElementById('header');
-var heading = document.getElementById('heading');
-var labels = document.getElementsByClassName('nav-label');
-// sizing
-var windowHeight = window.innerHeight;
-var windowWidth = window.innerWidth;
-var fontSize = windowHeight*0.01;
-var headingSize = windowWidth*0.1;
-// Event Listening
-navTrigger.addEventListener('click', navToggle);
-window.addEventListener('resize', resize);
-function resize() {
-  windowHeight = window.innerHeight;
-  windowWidth = window.innerWidth;
-  fontSize = windowHeight*0.1;
-  headingSize = windowWidth*0.1;
-  if(headingSize > windowHeight*0.3) headingSize = windowHeight*0.3; 
-  
-  for(var i = 0; i < labels.length; i++) {
-    labels[i].style.fontSize = fontSize*0.5+'px';
-    labels[i].style.height = fontSize+'px';
-    labels[i].style.marginTop = '-'+fontSize*0.38+'px';
-  }
-  header.style.height = windowHeight+'px';
-  heading.style.fontSize = headingSize+'px';
-  heading.style.height = headingSize+'px';
-  heading.style.marginTop = '-'+headingSize*0.6+'px';
-  
-}
-function navToggle(e) {
-  var closed = (navTrigger.className.indexOf('close') > 0); 
-  if(closed) {
-    navTrigger.className = 'nav-trigger open';
-    nav.className = 'out';
-  } else {
-    navTrigger.className = 'nav-trigger close';
-    nav.className = 'in';
-  }
-}
-window.onload = resize;
-</script>
-<script>
-  (function() {
-  var i, j, len, ref, responsiveVideo, rv,
-    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-  (function() {
-    var logo, logo_css;
-    logo = '#';
- 
-    document.head.insertAdjacentHTML('beforeend', '<style>' + logo_css + '</style>');
-    document.body.insertAdjacentHTML('beforeend', '<a href="https://codepen.io/mican/" target="_blank" class="mM">' + logo + '</a>');
-  })();
-  responsiveVideo = (function() {
-    function responsiveVideo(video) {
-      this.video = video;
-      this.update = bind(this.update, this);
-      if (!this.video) {
-        return;
-      }
-      this.img = new Image(this.video.width, this.video.height);
-      this.img.onload = this.update;
-      this.img.src = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' width%3D'" + this.video.width + "' height%3D'" + this.video.height + "' %2F%3E";
-      this.img.className = "rv-img rv-img-" + (document.querySelectorAll('.rv-img').length + 1);
-      this.img.setAttribute('style', 'position:absolute; top:0; left:0; opacity:0; pointer-events:none; width: auto; height: auto; max-width: 100%;');
-      this.video.parentNode.setAttribute('style', 'position:relative; padding:0;');
-      this.video.parentNode.appendChild(this.img);
-      window.addEventListener('resize', this.update);
-    }
-    responsiveVideo.prototype.update = function() {
-      var ref;
-      return ref = [this.img.width, this.img.height], this.video.width = ref[0], this.video.height = ref[1], ref;
-    };
-    return responsiveVideo;
-  })();
-  ref = document.querySelectorAll('.rv');
-  for (i = j = 0, len = ref.length; j < len; i = ++j) {if (window.CP.shouldStopExecution(1)){break;}
-    rv = ref[i];
-    window["rv" + i] = new responsiveVideo(rv);
-  }
-window.CP.exitedLoop(1);
-}).call(this);
-</script>
-</body>
-</html>
-
-  <div id="holdersoc">
-    <div id="holdersmall" style="margin: auto;text-align: center;">
-      <ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
-                      <!-- <li><a href="tel:(xxx)xxx-5945" class="icoRss" title="Phone"><i class="fa fa-phone"></i></a></li>-->
-       
-      <!-- <li><a href="mailto:avantgardevideography@gmail.com" class="icoGoogle" title="Facebook"><i class="fa fa-envelope" style=''></i></a></li>-->
-
-                        
-                      <li><a href="https://www.vimeo.com/avantgardevideography" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
-  
-                        <li><a href="https://www.instagram.com/avantgardevideography" class="icoLinkedin" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-
-                        <li><a href="https://www.facebook.com/avantgardevideography" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-        </ul>
-    </div>
-  </div>
-  <div class="arrow bounce">
-  <a style='color: #fff;' class="fa fa-arrow-down fa-2x" href="#viddyo"></a>
-</div>
-</section>
-
 
  
 <div class="row" style="width: 100%;/*background-color: #fff;*/border: 1px solid #fff;margin:auto;">
@@ -900,7 +778,7 @@ window.CP.exitedLoop(1);
   <section style="position: absolute;z-index: 1;width: 100%;margin: auto;">
   <div class="title"><span id="viddyo" style="color: #000;padding-top: 200px;">Avant-Garde</span><span style="color: #222;"> &nbsp; Videography<a target="_blanck" href="#" style="color: #09f;">by Bailey Oneal</a></span></div>
   <div id="uitem">
- <div class="social-buttons" style="margin-top:3vh;">
+ <div class="social-buttons" style="margin-top:3vh;width: 100%;" >
    <a href="https://www.vimeo.com/avantgardevideography" class="social-button twitter"><i class="fa fa-vimeo-square"></i></a>
    <a href="https://www.instagram.com/avantgardevideography" class="social-button dribbble"><i class="fa fa-instagram"></i></a>
    <a href="https://www.facebook.com/avantgardevideography" class="social-button facebook"><i class="fa fa-facebook"></i></a>
