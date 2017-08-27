@@ -379,6 +379,7 @@ nav.in li {
 }
 
 @media(max-width: 680px){
+  #face {margin-left: 0 !important;}
   #AVGlogo {font-size: 0.5em;padding:0 15px 15px 10px !important;margin-left:5px;}
   .social-buttons {margin-left: -20px;}
   iframe {height: 15vh;}
@@ -637,10 +638,11 @@ a {
   color: #333;
 }
 .cardContainer .personCard .personInfoContainer {
+ 
   display: table;
   width: 100%;
-  height: 60%;
-  background: url(https://media.giphy.com/media/Xbi8UfaEa6CRy/giphy.gif);
+  height: 30%;
+  background: transparent;
   -webkit-background-size: cover;
   background-size: cover;
 
@@ -713,41 +715,17 @@ a {
 
 
 
-@import 'https://fonts.googleapis.com/css?family=Prompt:400,700';
 
-.modal {
-  /* This way it could be display flex or grid or whatever also. */
-  display: block;
-  
-  /* Probably need media queries here */
-  width: 600px;
-  max-width: 100%;
-  
-  height: 400px;
-  max-height: 100%;
-  
-  position: fixed;
-  
-  z-index: 100;
-  
-  left: 50%;
-  top: 50%;
-  
-  /* Use this for centering if unknown width/height */
-  transform: translate(-50%, -50%);
-  
   /* If known, negative margins are probably better (less chance of blurry text). */
   /* margin: -200px 0 0 -200px; */
   
-  background: white;
-  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-}
+  
 .closed {
   display: none;
 }
 
 .modal-overlay {
-  position: ab;
+  
   top: 0;
   left: 0;
   width: 100%;
@@ -773,19 +751,7 @@ a {
   margin: 0;
   padding: 0;
 }
-body {
-  background-color:#556;
-  background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
-  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
-  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
-  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
-  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), 
-  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
-  background-size:80px 140px;
-  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
-  
-  font-family: 'Prompt', sans-serif;
-}
+
 ul {
   margin: 10px 0 10px 30px;
 }
@@ -826,6 +792,7 @@ h1 {
   border-radius: 10px;
   font-size: 21px;
 }
+#face {margin-left: 5em;}
 </style>
 </head>
 <body>
@@ -877,7 +844,7 @@ h1 {
 
 
 
-<div class="cardContainer" style="margin-left: 0;margin-top: 23vh;width: 100%;padding-bottom: 100%;font-size:22px; overflow-y: scroll;overflow-x: hidden;">
+<div class="cardContainer" style="margin-left: 0;margin-top: 8.5vh;width: 100%;padding-bottom: 100%;font-size:22px; overflow-y: scroll;overflow-x: hidden;">
   <div class="personCard">
     <div class="personInfoContainer">
       <div class="personImageWrapper">
@@ -885,22 +852,18 @@ h1 {
       </div>
       <div class="personDetailsWrapper">
         <ul>
-          <li class="personName" style="color:#5E3642;"><img src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/5CbUHGBO9LV96as/logo%20text%20no%20bg_thumb.png" style="padding: 5px 7px 12px 7px;margin-left: -0.35em;" alt="avgstuff"></li>
-          <li class="personInfo"><a style="text-decoration:none;color:#5E3642; font-family:'logieDistrict'" href="vimeo.com/avantgardevideography">Bailey O'neal</a></li>
-          <li class="personInfo" style="font-family:'logieDistrict';text-outline:3px solid black;  font-size: 1.2em;color:#333;">Wedding Videographer / Photographer</li>
+          <li class="personName" style="color:#5E3642;"><img src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/5CbUHGBO9LV96as/logo%20text%20no%20bg_thumb.png" style="padding: 5px 7px 12px 7px;margin-left: -0.68em;" alt="avgstuff"></li>
+          <li class="personInfo" style="text-decoration:none;color:#5E3642; font-family:'logieDistrict'">Wedding Videography + Photography + VFX</li>
+          <li class="personInfo" style="font-family:'logieDistrict';text-outline:3px solid black;  font-size: 1.2em;color:#333;"></li>
         </ul>
       </div>
     </div>
     <div class="tabsContainer" >
 
       <input id="tab1" type="radio" name="tabGroup" checked/>
-      <label for="tab1">Bio</label>
+      <label for="tab1" style="background:transparent;opacity: 0;"></label>
 
-      <input id="tab2" type="radio" name="tabGroup"/>
-      <label for="tab2"><a href='films.html' style="text-decoration:none; ">Films</a></label>
-
-      <input id="tab3" type="radio" name="tabGroup"/>
-      <label for="tab3"><a style="text-decoration:none; " href="mailto:avantgardevideography@gmail.com">Email</a></label>
+     
 
       <div class="tabsContent">
         <div id="content1" class="content">
@@ -915,28 +878,14 @@ h1 {
         
           
           <hr>
-          <div class="modal-overlay" id="modal-overlay"></div>
 
-<div class="modal" id="modal">
-  <button class="close-button" id="close-button" style="font-size: 0.75em;">Close</button>
-  
-  <div class="modal-guts">
 
-    <h1>Hello! I'm Bailey O'neal &nbsp; </h1>
-    <p style=" margin-top: 7px;font-family: 'logieDistrict';">I love making videos! I love going places with my camera and enjoy capturing the content around me. I love starting a new project, and having an open opportunity to be creative and original. And finally, I love making a product that can be used as a keepsake to really help people relive and remember special times. I specialize in <a style='text-decoration: none;color:#5e3642;' href="https://www.vimeo.com/avantgardevideography">wedding videography</a>, and freelance with <a style='text-decoration: none;color:#5e3642;' href="photography.html">photography</a> and <a style='text-decoration: none;color:#5e3642;' href="vfx.html">visual effect work</a>. If you have a project that falls in any of those categories, please drop me a line!
+<img id='face' style="padding-bottom: 21px;width: 12em;position: center;margin-left:5em;" class='img-circle' src="https://dl2.pushbulletusercontent.com/zDrjBFASrYkefw3ewCTmfmBeP143l7Hv/thumbnail" alt="Bailey O'Neal">
+           <p style="font-size: 0.8em;text-align: center;">Hello! My name is <span >Bailey O'Neal</span> and I love making videos! I love going places with my camera and enjoy capturing the content around me. I love starting a new project, and having an open opportunity to be creative and original. And finally, I love making a product that can be used as a keepsake to really help people relive and remember special times. I specialize in wedding videography, and freelance with photography and visual effect work</a>. If you have a project that falls in any of those categories, please drop me a line!</p><br>
+               <p style=" font-family: 'logieDistrict';"><img style="width: 100%;" src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/Wbb3aKu0wGTCQXB/me%20working.jpg" alt="me working"></p>
+           <hr>
 
-For any inquiries, please email me at <a href="mailto:avantgardevideography@gmail.com">avant-gardevideography@gmail.com</a>. I'd love to hear from you!</p>
-    <p style=" font-family: 'logieDistrict';"><img style="width: 100%;" src="https://dl2.pushbulletusercontent.com/fqXUKmN2tIqROi8wTcjyUTmImhjRvcRS/thumbnail" alt=""></p>
-    
-  </div>
-</div>
-
-<button id="open-button" class="open-button" style="display: none;">Open Button</button>
-
-<img style="padding-bottom: 21px;width: 12em;position: center;" class='img-circle' src="https://dl2.pushbulletusercontent.com/zDrjBFASrYkefw3ewCTmfmBeP143l7Hv/thumbnail" alt="Bailey O'neal">
-           <p style="font-size: 0.8em;">Hello! My name is <span ><a style='text-decoration: none;color:#2463e5;' href="https://www.vimeo.com/avantgardevideography">Bailey O'neal</a></span> and I love making videos! I love going places with my camera and enjoy capturing the content around me. I love starting a new project, and having an open opportunity to be creative and original. And finally, I love making a product that can be used as a keepsake to really help people relive and remember special times. I specialize in <b><a style='text-decoration: none;color:#5e3642;' href="https://www.vimeo.com/avantgardevideography">wedding videography</a></b>, and freelance with <b><a style='text-decoration: none;color:#5e3642;' href="photography.html">photography</a></b> and <b><a style='text-decoration: none;color:#5e3642;' href="vfx.html">visual effect work</a></b>. If you have a project that falls in any of those categories, please drop me a line!
-
-For any inquiries, please email me at <a href="mailto:avantgardevideography@gmail.com">avant-gardevideography@gmail.com</a>. I'd love to hear from you!</p>
+For any inquiries, please email me at<br> <a  style="font-family: 'logieDistrict';" href="mailto:avantgardevideography@gmail.com">avant-gardevideography@gmail.com</a>. <br>I'd love to hear from you!</p>
       </div>
         </div>
         <div id="content2" class="content">
