@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>were</title>
+<title>Contact| Avant-Garde Videography</title>
 
 <style>
 @font-face {
@@ -16,280 +16,268 @@
     src: url(Gilroy-ExtraBold.otf);
 }
 
-body {
-  background: #fff;
-  height: 100vh;
-  width: 100%;
-  overflow: scroll;
-  font-family: 'logieFont';
- 
-}
-#bgimg1 {  background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  }
+@font-face {
+    font-family: 'logieDistrict';
+    src: url(DistTh__.otf);
+} 
 
-p {
-  line-height: 1.5;
-}
-
-.nav-trigger {
-  position: fixed;
-  width: 110px;
-  height: 98px;
-  right: 0px;
-  top: 0px;
-  cursor: pointer;
-  z-index: 200;
-  -webkit-transform-origin: 110px 0px;
-  -moz-transform-origin: 110px 0px;
-  -ms-transform-origin: 110px 0px;
-  -o-transform-origin: 110px 0px;
-  transform-origin: 110px 0px;
-  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
-  -ms-transform: scale(0.6);
-  -o-transform: scale(0.6);
-  transform: scale(0.6);
-  -webkit-transition: background 0.3s linear;
-  -moz-transition: background 0.3s linear;
-  transition: background 0.3s linear;
-}
-
-.nav-trigger.open {
-  background: #222;
-}
-
-.nav-trigger.close {
-  background: transparent;
-}
-
-.line {
-  display: block;
-  position: absolute;
-  width: 80px;
-  height: 8px;
-  background: #fff;
-  left: 15px;
-  -webkit-transform-origin: 0px 4px;
-  -moz-transform-origin: 0px 4px;
-  -ms-transform-origin: 0px 4px;
-  -o-transform-origin: 0px 4px;
-  transform-origin: 0px 4px;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-}
-
-.line:nth-child(1) {
-  top: 16px;
-}
-
-.line:nth-child(2) {
-  top: 44px;
-}
-
-.line:nth-child(3) {
-  top: 72px;
-}
-
-.close .line:nth-child(1) {
-  -webkit-transform: translateX(11px) rotate(45deg);
-  -moz-transform: translateX(11px) rotate(45deg);
-  -ms-transform: translateX(11px) rotate(45deg);
-  -o-transform: translateX(11px) rotate(45deg);
-  transform: translateX(11px) rotate(45deg);
-}
-
-.close .line:nth-child(2) {
-  opacity: 0;
-}
-
-.close .line:nth-child(3) {
-  -webkit-transform: translateX(11px) rotate(-45deg);
-  -moz-transform: translateX(11px) rotate(-45deg);
-  -ms-transform: translateX(11px) rotate(-45deg);
-  -o-transform: translateX(11px) rotate(-45deg);
-  transform: translateX(11px) rotate(-45deg);
-}
-
-nav {
+body {margin: 0;
+  padding-top: 0;
+  overflow-x: hidden;
+  overflow-style: none;
   width: 100%;
   height: 100%;
+list-style: none;
+}
+.logocon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background: #e61919;
+  animation: color 30s linear infinite;
+  user-select: none;
   position: fixed;
-  z-index: 100;
+  top: 0;
+  z-index: 3;
 }
-
-nav.out {
-  pointer-events: none;
-}
-
-nav.in {
-  pointer-events: auto;
-}
-
-nav ul, li {
-  display: block;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  cursor: pointer;
-}
-
-nav ul {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-nav li {
-  height: 20%;
-  position: relative;
-  background: #222;
+.logo {
+  font: 300 150px 'logieFont';
   color: #fff;
-  font-family: "logieFont";
-  opacity: 1;
+  cursor: default;
+}
+.hint {
+  position: fixed;
+  z-index: 4;
+  bottom: 10vh;
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  font: 300 30px 'logieFont';
+}
+.content {
+  padding: 30px;
+  position: relative;
+  top: 20vh;
+  height: 100vh;
+  font: 16px;
+  font-family: 'logieDistrict';
+}
+@-moz-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #7f19e6;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #80e619;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@-webkit-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #7f19e6;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #80e619;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@-o-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #7f19e6;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #80e619;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #7f19e6;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #80e619;
+  }
+  100% {
+    background: #e61919;
+  }
 }
 
-nav li:hover {
-  background: url(https://image.freepik.com/free-vector/pattern-of-ornamental-watercolor-shapes_23-2147665475.jpg);
 
 
+html #background,
+body #background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
-
-nav.in li:nth-child(1) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
-}
-
-nav.in li:nth-child(2) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
-}
-
-nav.in li:nth-child(3) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
-}
-
-nav.in li:nth-child(4) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
-}
-
-nav.in li:nth-child(5) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
-}
-
-nav.out li:nth-child(5) {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
-}
-
-nav.out li:nth-child(4) {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
-}
-
-nav.out li:nth-child(3) {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
-}
-
-nav.out li:nth-child(2) {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
-}
-
-nav.out li:nth-child(1) {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
-}
-
-nav.out li {
-  -webkit-transform: translateY(300%);
-  -moz-transform: translateY(300%);
-  -ms-transform: translateY(300%);
-  -o-transform: translateY(300%);
-  transform: translateY(300%);
-  opacity: 0;
-}
-
-nav.in li {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.nav-label {
+html .main,
+body .main {
   position: absolute;
   width: 100%;
-  left: 0;
-  text-align: center;
-  height: 16px;
+  height: 500vh;
   top: 50%;
-  margin-top: -8px;
+  left: 50%;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+}
+html .main #content,
+body .main #content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 24px;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  top: 33%;
+}
+html .main #content .title,
+body .main #content .title {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+html .main #content .title span,
+body .main #content .title span {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+}
+html .main #content p,
+body .main #content p {
+  color: #E6DBAE;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  padding: 0;
+  letter-spacing: .5rem;
   text-transform: uppercase;
 }
-
-.header {
-  /*background: url(https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/m3GK1As1A2NeUDD/sitebg.jpg);
-  background-size: cover;
-  position: relative;*/
-  width: 100%;
-  min-height: 100vh;
-  top: 0;
+html .main #content p:last-child,
+body .main #content p:last-child {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 3em auto;
+  padding: 0;
+  letter-spacing: .1rem;
 }
-
-.header h1 {
-  width: 100%;
+html .main #content p:last-child > a,
+body .main #content p:last-child > a {
+  text-decoration: none;
+  color: inherit;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+html .main #content p:last-child > a:hover,
+body .main #content p:last-child > a:hover {
   color: #fff;
-  position: absolute;
-  margin: 0;
-  font-family: "logieFont";
-  text-align: center;
-  display: block;
-  top: 50%;
 }
-
-.content {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 600px;
-  padding: 20px;
+html .main #content section,
+body .main #content section {
+  color: #fff;
   margin: 0 auto;
+  line-height: 24px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+html .main #content section ul,
+body .main #content section ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+html .main #content section ul li,
+body .main #content section ul li {
+  display: inline-block;
+  margin-right: 2rem;
+  width: 6rem;
+}
+html .main #content section .timenumbers,
+body .main #content section .timenumbers {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+html .main #content section p.timedescription,
+body .main #content section p.timedescription {
+  font-size: .5rem;
+  font-variant: small-caps;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 0px;
 }
 
+#tit2 {font-family: 'logieFont';}
 
-/*start social tabs */
-         ul.social-network {
+               
+                     ul.social-network {
                         list-style: none;
                         display: inline;
                         margin-top:2px;
-                        margin-left:0; !important;
+                        margin-left:0 !important;
                         padding: 0;
                         size:auto;
                         
-                    }
+                    }    
+                    
                     ul.social-network li {
                         display: inline;
                         margin: 0 5px;
@@ -355,582 +343,261 @@ nav.in li {
                         -o-transition: all 0.8s;
                         -ms-transition: all 0.8s;
                         transition: all 0.8s;
+                        list-style: none;
                     }
-                    a {
-                     background:transparent;;   
-                    }
+                    a {background: transparent;
+                      list-style: none;}
 
 
-.wrap {
-  margin: auto;
-  width: 100%;
+@media (min-width: 500px) {
+  .col-sm-6 {
+    width: 50%;
+  }
 }
-.main-header {
-  background: #34495E;
+
+
+.frontend-side {
+  background-image: url("https://i.redd.it/9f8olhedwsgz.gif");
+  opacity: 0.9;
+}
+
+.uiux-side {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74452/website-post-its.png");
+}
+
+.split-pane {
+  padding-top: 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50%;
+  min-height: 3em;
+  font-size: 2em;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+;
+}
+@media(min-width: 500px) {
+  .split-pane {
+    padding-top: 1em;
+    height: 15%;
+  }
+}
+.split-pane > div {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   text-align: center;
 }
-.logo, 
-.main-nav a {
-  display: inline-block;
-  color: #FFF;
-  text-decoration: none;
+.split-pane > div .text-content {
+  line-height: 1.6em;
+  margin-bottom: 1em;
 }
-.main-nav a {
-  padding: 0 .75em;
-  border-right: 1px dotted;
-  color: rgba(255,255,255, .8);
-  font-size: .7em;
-  line-height: 1rem;
+.split-pane > div .text-content .big {
+  font-size: 2em;
 }
-.main-nav a:hover {
-  text-decoration: underline;
+.split-pane > div img {
+  height: 1.3em;
 }
-.main-nav a:last-child {
-  border-right: none;
+@media (max-width: 500px) {
+  .split-pane > div img {
+    display:none;
+  }
 }
-.content, 
-.main-header {
-  overflow: hidden;
-}
-.col {
-  height: 240px;
-}
-.main {
-  
-}
-.secondary {
-  background: #2ECC71;
-}
-.extra {
-  display: none;
-  background: #E74C3C;
-}
-.main-footer {
-  background: #95A5A6;
-}
-.main-header, 
-.main-footer, 
-.col {
-  margin-bottom: 15px;
-  padding: 2.15%;
+.split-pane button, .split-pane a.button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight:800;
+  background: none;
+  border: 1px solid white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
+  width: 15em;
+  padding: 0.7em;
+  font-size: 0.5em;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+.split-pane button:hover, .split-pane a.button:hover {
+  text-decoration: none;
+  background-color: white;
+  border-color: white;
+  cursor: pointer;
+}
+.uiux-side.split-pane button:hover, .split-pane a.button:hover {
+  color: violet;
+}
+.frontend-side.split-pane button:hover, .split-pane a.button:hover {
+  color: blue;
 }
 
-/*==================================
-   Media Queries
-==================================*/
-
-
-/* Phones to Tablets */
-
-@media only screen and (min-width: 481px) {
-  .col {
-    float: left;
-  }
-  .main {
-    width: 65.957446808511%;
-  }
-  .secondary {
-    width: 31.914893617021%; 
-  }
-  .secondary,
-  .extra {
-    margin-left: 2.127659574468%;
-  }
-}
-
-/* Tablets to Desktop */
-
-@media only screen and (min-width: 769px) { 
-  .logo {
-    float: left;
-  }
-  .main-nav {
-    float: right;
-  }
-  .main {
-    width: 40.425531914894%;
-  }
-  .extra {
-    display: block;
-    width: 23.404255319149%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {  
-  .wrap {
-    width: 85%;
-  }
-}
-
-/* @media not screen and (monochrome) {
-  body {
-      background: red; */
-
-
-
-
-
-
-.code-editor:before,
-.code-editor:after,
-.code-editor span.control:before,
-.code-editor span.after:after {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  content: '';
-  position: absolute;
-  z-index: 1;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: wall .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-.code-editor {
-
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  margin: 130px auto 0 auto;
-  width: 575px;
-  text-align: left;
-  background-color: #473431;
-  border-radius: 0 0 5px 5px;
-  overflow: auto;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: wall .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-.code-editor:before {
-  content: 'Logan Wilson - Entrepreneur';
-  font-family: 'Consolas';
-  color: #222;
-  padding-top: 6px;
+#split-pane-or {
+  font-size: 2em;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
-  top: 100px;
-  width: 575px;
-  height: 30px;
-  background-color: #fafafa;
-  border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  -o-border-radius: 5px 5px 0 0;
-  -webkit-border-radius: 5px 5px 0 0;
-}
-
-.code-editor span.control:before {
-  content: '';
-  top: 110px;
-  z-index: 2;
-  padding: 6px;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -o-border-radius: 20px;
-  -webkit-border-radius: 20px;
-}
-
-.code-editor span.control:nth-child(1):before {
-  margin-left: 15px;
-  background-color: #df6963;
-}
-
-.code-editor span.control:nth-child(2):before {
-  margin-left: 35px;
-  background-color: #f5e18a;
-}
-
-.code-editor span.control:nth-child(3):before {
-  margin-left: 55px;
-  background-color: #97c38a;
-}
-
-/* -- iPad Screen -- */
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  .code-editor {
-    width: 575px;
-  }
-
-  .code-editor:before {
-    width: 575px;
-  }
-}
-/* -- iPhone Screen -- */
-@media only screen and (max-width: 479px) {
-  .code-editor {
-    width: 300px;
-  }
-
-  .code-editor:before {
-    width: 300px;
-  }
-}
-/**
- * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
- * @author Rose Pritchard
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #ccc;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: 0em 0;
-  height: 362px;
-  overflow: auto;
-
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #473431;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  -moz-border-radius: .3em;
-  -o-border-radius: .3em;
-  -webkit-border-radius: .3em;
-}
-
-.token.comment,
-.token.block-comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #999;
-}
-
-.token.punctuation {
-  color: #ccc;
-}
-
-.token.tag,
-.token.attr-name,
-.token.namespace {
-  color: #e2777a;
-}
-
-.token.function-name {
-  color: #6196cc;
-}
-
-.token.boolean,
-.token.number,
-.token.function {
-  color: #f08d49;
-}
-
-.token.property,
-.token.class-name,
-.token.constant,
-.token.symbol {
-  color: #f8c555;
-}
-
-.token.selector,
-.token.important,
-.token.atrule,
-.token.keyword,
-.token.builtin {
-  color: #cc99cd;
-}
-
-.token.string,
-.token.attr-value,
-.token.regex,
-.token.variable {
-  color: #7ec699;
-}
-
-.token.operator,
-.token.entity,
-.token.url {
-  color: #67cdcc;
-}
-
-.token.important {
-  font-weight: bold;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-pre.line-numbers {
-  position: relative;
-  padding-left: 1em;
-  counter-reset: linenumber;
-  padding-bottom: 1px;
-}
-
-pre.line-numbers > code {
-  position: relative;
-}
-
-.line-numbers .line-numbers-rows {
+  width: 100%;
   position: absolute;
-  pointer-events: none;
-  top: 100;
-  font-size: 100%;
-  left: -13em;
-  width: 3em;
-  /* works for line-numbers below 1000 lines */
-  letter-spacing: -1px;
-  background-color: #322422;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (max-width: 925px) {
+  #split-pane-or {
+    top:15%;
+  }
+}
+#split-pane-or > div img {
+  height: 2.5em;
+}
+@media (max-width: 500px) {
+  #split-pane-or {
+    position: absolute;
+    top: 50px;
+  }
+  #split-pane-or > div img {
+    height:1em;
+  }
+}
+@media(min-width: 500px) {
+  #split-pane-or {
+    font-size: 3em;
+  }
+}
+.big {
+  font-size: 2em;
 }
 
-.line-numbers-rows > span {
-  pointer-events: none;
-  display: block;
-  counter-increment: linenumber;
+#slogan {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  text-align: center;
+  vertical-align: baseline;
+  top: 0.5em;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
 }
-
-.line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #999;
-  display: block;
-  padding-right: 0.8em;
-  text-align: right;
+@media(min-width: 500px) {
+  #slogan {
+    top: 5%;
+    font-size: 1.8em;
+  }
 }
-
+#slogan img {
+  height: 0.7em;
+}
+.bold {
+  text-transform:uppercase;
+}
+.big {
+  font-weight:800;
+}
 </style>
 </head>
 <body>
-<div id="bgimg1" style="position: fixed;top:0;"></div>
-	<div id="nav-trigger" class="nav-trigger open">
-  <span class="line"></span>
-  <span class="line"></span>
-  <span class="line"></span>
-</div>
-<nav id="nav" class="out">
-  <ul>
-   
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Films</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Packages</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>VFX</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Photography</a></span></li>
-    <li><span class="nav-label" style ="font-size: 12px;"><a href='http://www.facebook.com' style ='text-decoration: none;color: #2777;'>Contact</a></span></span></li>
-
-  </ul>
-</nav>
-<section style="text-align: center;margin: auto;"> 
-<div class="row" style="width: 100%;position: relative;margin: auto; z-index:99;margin-top: 12vh;">
-<div class="code-editor">
-      <span class="control"></span>
-      <span class="control"></span>
-      <span class="control"></span>
-      <pre class="line-numbers language-css">       <code class=" language-css">
-      <span class="token selector" style="letter-spacing: -4px;">  < ! d o c t y p e  l e g i t  r e s u m é  >  </span><span class="token punctuation">.</span>
-<span class="token comment" spellcheck="true">/* 
-   My curriculum vitae
-   you can contact me via Email
-   Loganwilsonis@yahoo.com
-*/</span>
-
-<span class="token selector" style="color: #e2777a;">#studies</span><span class="token punctuation">{</span>
-
-  <span class="token selector">.2010</span><span class="token punctuation">{</span>
-    <span class="token property">James_B_Conant</span><span class="token punctuation">:</span> Graphic Design<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><br>
-  <span class="token selector">.2012</span><span class="token punctuation">{</span>
-    
-      <span class="token property">University_of_Southern_Palatine</span><span class="token punctuation">:</span> Psychology &amp; UX/UI<span class="token punctuation">;</span>
+  
  
-  <span class="token punctuation">}</span>
-
-  <span class="token selector">.2016</span><span class="token punctuation">{</span>
-    <span class="token property">The_Youtube_University</span><span class="token punctuation">:</span> HTML, CSS &amp; JS<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><br>
-<span class="token punctuation">}</span>
-
-<span class="token selector" style="color: #e2777a;">#skills </span><span class="token punctuation">{</span>
-
-  <span class="token property">HTML</span><span class="token punctuation">:</span> 95%<span class="token punctuation">;</span>
-  <span class="token property">Final Cut Pro</span><span class="token punctuation">:</span> 89%<span class="token punctuation">;</span>
-  <span class="token property">Adobe Photoshop</span><span class="token punctuation">:</span> 98%<span class="token punctuation">;</span>
-  <span class="token property">CSS</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
-  <span class="token property">Adobe Illustrator</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
-  <span class="token property">Adobe Dreamweaver / Sublime</span><span class="token punctuation">:</span> 97%<span class="token punctuation">;</span>
-  <span class="token property">Javascript</span><span class="token punctuation">:</span> 67%<span class="token punctuation">;</span>
-  <span class="token property">UX/UI</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-  <span class="token property">Jade/Pug</span><span class="token punctuation">:</span> 60%<span class="token punctuation">;</span>
-  <span class="token property">Social Media Marketing</span><span class="token punctuation">:</span> 98%<span class="token punctuation">;</span>
-  <span class="token property">Branding</span><span class="token punctuation">:</span> 99%<span class="token punctuation">;</span>
-  <span class="token property">Wordpress / Shopify</span><span class="token punctuation">:</span> 76%<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector" style="color: #e2777a;">#projects &amp; Experience</span><span class="token punctuation">{</span>
-
-  <span class="token selector">.<a href='https://www.RentHub.com'>RentHub.com</a></span><span class="token punctuation">{</span>
-    <span class="token property">AWS</span><span class="token punctuation">:</span> 7<span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("www.agatacieslak.com")</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token selector">.dead_letter_records</span><span class="token punctuation">{</span>
-    <span class="token property">drupal</span><span class="token punctuation">:</span> 7 commerce<span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("www.deadletterrecords.com")</span><span class="token punctuation">;</span>
-    &amp;<span class="token selector">:before</span><span class="token punctuation">{</span>
-      <span class="token property">display</span><span class="token punctuation">:</span> static<span class="token punctuation">;</span>
-      <span class="token property">cms</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-  <span class="token punctuation">}</span>
-  <span class="token selector">.peepsout</span><span class="token punctuation">{</span>
-    <span class="token property">drupal</span><span class="token punctuation">:</span> 7<span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("www.peepsout.com")</span><span class="token punctuation">;</span> 
-    <span class="token property">display</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span>// overriden by a wordpress site
-      &amp;<span class="token selector">;:before</span><span class="token punctuation">{</span>
-        <span class="token url">url("www.cristinallamas.me/projects/peepsout")</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">#jobs</span><span class="token punctuation">{</span>
-  <span class="token selector">.2011</span><span class="token punctuation">{</span>
-    <span class="token property">freelance</span><span class="token punctuation">:</span>absolute<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>  
-  <span class="token selector">.2012</span><span class="token punctuation">{</span>
-    <span class="token property">position</span><span class="token punctuation">:</span><span class="token string">"Junior Drupal Developer"</span><span class="token punctuation">;</span>
-    <span class="token property">company</span><span class="token punctuation">:</span><span class="token string">"ATD Travel Services"</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<!--cover w/ skrollr values (for example data-100 for styles at 100 pixels scroled)-->
+<div class="logocon" data-0="height: 100vh; opacity: 1" data-99="height: 10vh; opacity: .85" data-100="height: 50px">
+  <div id='tit2' class="logo" data-0="font-size: 150px" data-100="font-size: 32px" style="font-family: 'logieFont' !important;">GQ|LMT</div>
 </div>
-</div><!--/end row-->
-</section>
- <!-- <div id="holdersoc">
-    <div id="holdersmall" style="margin: auto;text-align: center;">
-      <ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
+<div class="hint" data-0="bottom: 10vh" data-100="bottom: -25px">scroll down </div>
+<!--page contents below-->
+<div class="content">
+  <video autoplay loop muted poster="screenshot.jpg" id="background">
+  <source src="http://i.istockimg.com/video_passthrough/19428390/153/19428390.mp4" type="video/mp4">
+  <!--<source src="http://i.istockimg.com/video_passthrough/60458542/153/60458542.mp4" type="video/mp4">-->
+</video>
+<div class="main" style="">
+  <div id='content' style="margin-top: 367px;">
+    <div class='title' style="font-family:'logieFont';">
+ 
+ <br>
+ <img  style='width: 280px;height: 280px;padding: 7px 5px 7px 5px; margin-top: 5px;' class="img-circle" src="https://dl2.pushbulletusercontent.com/DzDfZo49HjSeAO6XDWG4mSGpmvqwt8oE/FullSizeRender.jpg" alt="">
+<h1 id="tit">Griselle Quinones</h1>
+    <section>
+Licensed Massage Therapist
+    </section>
+<hr>
+
+<li style="margin-top: -30px;">
+ <ul class="social-network social-circle" style="list-style: none;">
                        <!-- <li><a href="tel:(630)402-5598" class="icoRss" title="Phone"><i class="fa fa-phone"></i></a></li>-->
                         
-                     <!--   <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
+                        <li><a href="https://www.vimeo.com/avantgardevideography" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
   
-                        <li><a href="https://www.instagram.com/" class="icoLinkedin" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/avantgardevideography" target="_blank" class="icoLinkedin" title="Instagram"><i class="fa fa-instagram"></i></a></li>
 
-                        <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li> -->
+                        <li><a href="https://www.facebook.com/avantgardevideography" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
 
         </ul>
-    </div>
-  </div>
-</section>
-<section class="">
-<div class="wrap">
-    <header class="main-header">
-      <a class="logo" href="#">Logo</a>
- 
-    </header>
-    <div class="content">
-      <div class="main col" style="background-image: url(https://www.twodelighted.com/wp-content/uploads/2012/09/baby-kitty-3.jpg);background-size: cover;">
-        Main
-      </div>
-      <div class="secondary col">
-      
-      </div>
-      <div class="extra col">
-        Extra
-      </div>
-    </div>
-    <footer class="main-footer" style="width: 50%;margin: auto;margin-top: 20px;">
-      Footer
-    </footer>
-  </div>
- 
-</section>
+      </li>
+</div>
 
+
+
+<div class='split-pane col-xs-12 col-sm-6 uiux-side'>
+  <div>
+  <!--  <img src='https://bit.ly/BCR-design'> -->
+    <div class='text-content' style="margin-top: 45px;">
+      <div class="bold" style="font-size: 0.8em;">You Want Relaxation?</div>
+      <div class='big' style="font-size: 21px;">MAKE AN APPOINTMENT</div>
+    </div>
+    <button>
+      GQ | LMT <br>
+      LICENSED MASSAGE THERAPY
+    </button>
+  </div>
+</div>
+<div class='split-pane col-xs-12 col-sm-6 frontend-side'>
+  <div>
+   <!-- <img src='https://bit.ly/bcr-dev'> -->
+    <div class='text-content' style="margin-top: 70px;">
+      <div class="bold" style="font-size: 0.8em; color: #000;">You want</div>
+      <div class='big' style="font-size: 21px;">SKIN SAFE PRODUCTS?</div>
+    </div>
+    <a class='button' style=" color: #000;">
+      ORGANIC <br>GQ | B&AMP;E
+      <BR>
+      ESSENTIALS
+    </a>
+  </div>
+</div>
+<div id='split-pane-or'>
+  <div>
+   
+  </div>
+</div>
+</div><!---->
+
+<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <script>
-	// selected elements
-var navTrigger = document.getElementById('nav-trigger');
-var nav = document.getElementById('nav');
-var header = document.getElementById('header');
-var heading = document.getElementById('heading');
-var labels = document.getElementsByClassName('nav-label');
-
-// sizing
-var windowHeight = window.innerHeight;
-var windowWidth = window.innerWidth;
-var fontSize = windowHeight*0.01;
-var headingSize = windowWidth*0.1;
-
-// Event Listening
-navTrigger.addEventListener('click', navToggle);
-window.addEventListener('resize', resize);
-
-function resize() {
-  windowHeight = window.innerHeight;
-  windowWidth = window.innerWidth;
-  fontSize = windowHeight*0.1;
-  headingSize = windowWidth*0.1;
-  if(headingSize > windowHeight*0.3) headingSize = windowHeight*0.3; 
   
-  for(var i = 0; i < labels.length; i++) {
-    labels[i].style.fontSize = fontSize*0.5+'px';
-    labels[i].style.height = fontSize+'px';
-    labels[i].style.marginTop = '-'+fontSize*0.38+'px';
-  }
-
-  header.style.height = windowHeight+'px';
-  heading.style.fontSize = headingSize+'px';
-  heading.style.height = headingSize+'px';
-  heading.style.marginTop = '-'+headingSize*0.6+'px';
+  $('.form-container label').each(function(){
+    var getTitle = $(this).html();
+    $(this).parent().find('input').attr('placeholder', getTitle)
+    
+  });
   
-}
+  
 
-function navToggle(e) {
-  var closed = (navTrigger.className.indexOf('close') > 0); 
-  if(closed) {
-    navTrigger.className = 'nav-trigger open';
-    nav.className = 'out';
-  } else {
-    navTrigger.className = 'nav-trigger close';
-    nav.className = 'in';
-  }
-}
 
-window.onload = resize;
 </script>
-<!-- <section id="header" class="header">
-   
- <!-- <div id="holdersoc">
-    <div id="holdersmall" style="margin: auto;text-align: center;">
-      <ul class="social-network social-circle" style="display:inline-block;margin-top: 68.5vh;">
-                       <!-- <li><a href="tel:(630)402-5598" class="icoRss" title="Phone"><i class="fa fa-phone"></i></a></li>-->
-                        
-                     <!--   <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-vimeo-square"></i></a></li>
-  
-                        <li><a href="https://www.instagram.com/" class="icoLinkedin" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-
-                        <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li> -->
-
-        </ul>
-    </div>
-  </div>
-</section> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.26/skrollr.min.js'></script>
+<script>skrollr.init();
+</script>
 </body>
+
 </html>
