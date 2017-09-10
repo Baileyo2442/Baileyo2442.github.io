@@ -1,0 +1,748 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+   <!-- Bootstrap and Font Awesome css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VFX | Avant Garde Videography</title>
+
+<style>
+@font-face {
+    font-family: "logieFont";
+    src: url(Gilroy-ExtraBold.otf);
+}
+
+body {
+  background: #555;
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  font-family: 'logieFont';
+ 
+}
+#bgimg1 {  background: url(https://image.freepik.com/free-psd/modern-corporate-flyer-template_1051-1712.jpg);
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  }
+
+  *, *::after, *::before {
+  box-sizing: inherit;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+
+  font-weight: bold;
+}
+
+p {
+  position: relative;
+  margin: 0;
+}
+
+html {
+
+  font-size: 16px;
+  font-smooth: auto;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #46494C;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: #4C5C68;
+  text-decoration: none;
+  transition: 125ms linear;
+}
+
+.container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.page-menu-bar {
+  background: #222;
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+@media only screen and (max-width: 768px) {
+  .page-menu-bar .page-menu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page-menu-bar {
+    background: none;
+  }
+}
+.page-menu-bar li {
+  display: inline-block;
+  margin: 20px 40px 16px 40px;
+}
+.page-menu-bar li a {
+  color: #999;
+  text-decoration: none;
+  font-family: 'logieDistrict' ;
+  font-weight: 300;
+  font-size: 20px;
+}
+.page-menu-bar li a:hover {
+  color: white;
+}
+.page-menu-bar li .selected {
+  font-weight: 400;
+  color: black;
+}
+.res-menu-button {
+  text-align: right;
+  color: #fff;
+  cursor: pointer;
+  padding-right: 20px;
+  font-size: 56px;
+  display: none;
+}
+.res-menu-button:hover {
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  .res-menu-button {
+    display: block;
+  }
+}
+.res-menu {
+  display: none;
+}
+.res-menu li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.res-menu li a {
+  display: block;
+  padding: 16px;
+  background: #222;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+.res-menu li a:hover {
+  color: black;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "navigation" "main" "sidebar" "footer";
+}
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header" "navigation navigation" "main sidebar" "footer footer";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header header header" "navigation navigation navigation navigation" "main main main sidebar" "footer footer footer footer";
+  }
+}
+.grid header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  padding: 100px 10px 20px;
+}
+.grid main {
+  position: relative;
+  display: inline-grid;
+  grid-area: main;
+  padding: 30px 10px;
+}
+@media screen and (min-width: 1024px) {
+  .grid main {
+    grid-template-columns: 50% 50%;
+  }
+}
+.grid aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: sidebar;
+  padding: 10px;
+}
+.grid footer {
+  position: relative;
+  display: block;
+  grid-area: footer;
+  padding: 30px 0 0;
+  background-color: #4C5C68;
+}
+
+header {
+ 
+}
+header .text {
+  position: relative;
+  display: block;
+  height: 15px;
+  margin: 0 0 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+header .text:nth-of-type(1) {
+  width: 70%;
+  margin-bottom: 5px;
+}
+header .text:nth-of-type(2) {
+  width: 40%;
+}
+header .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 20px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  float: right;
+}
+
+main {
+  background-color: whitesmoke;
+}
+main > h2 {
+  margin: 0 0 10px;
+}
+main section {
+  position: relative;
+  margin: 0 0 50px;
+}
+main section:last-child {
+  margin: 0;
+}
+main section article {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 5px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+main section article h3 {
+  position: relative;
+  margin: 10px;
+}
+main section article .img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  padding: 60px 0;
+  color: #928f94;
+  font-size: 24px;
+  background-color: #DCDCDD;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main section article .img.art-1 {
+  background-image: url("");
+}
+main section article .img.art-2 {
+  background-image: url("");
+}
+main section article .img.art-3 {
+  background-image: url("");
+}
+main section article p {
+  padding: 0 10px;
+  font-size: 14px;
+}
+main section article .info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0 0;
+}
+main section article .info > div {
+  width: 50%;
+}
+main section article .info > div.date {
+  margin: 0 0 10px 10px;
+  text-align: left;
+}
+main section article .info > div.date span {
+  padding: 5px 10px;
+  background-color: #DCDCDD;
+  border-radius: 99px;
+  color: #46494C;
+  font-size: 12px;
+}
+main section article .info > div.more {
+  margin: 0 10px 10px 0;
+  text-align: right;
+}
+main section article .info > div.more a {
+  padding: 5px 10px;
+  border-radius: 99px;
+  color: #777;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+main section article .info > div.more a:hover {
+  background-color: #4C5C68;
+  color: white;
+}
+main section article .info > div.more a i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+aside {
+  background-color: #676767;
+  color: white;
+}
+aside h2 {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  text-align: left;
+}
+aside .box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 0 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .brand {
+  position: relative;
+  display: block;
+  width: 195px;
+  height: 55px;
+  margin: 0 auto 20px;
+}
+footer .brand .logo {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  margin: 0 15px 0 0;
+  padding: 0;
+  background-color: #36424b;
+  border-radius: 50%;
+  float: left;
+}
+footer .brand .logo:before, footer .brand .logo:after {
+  position: absolute;
+  content: '';
+  width: 40%;
+  height: 40%;
+  background-color: rgba(25, 133, 161, 0.3);
+  border-radius: 50%;
+}
+footer .brand .logo:before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -50%);
+}
+footer .brand .logo:after {
+  top: 50%;
+  right: 50%;
+  transform: translate(80%, -50%);
+}
+footer .brand .contact-info {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  float: Left;
+  clear: right;
+}
+footer .brand .contact-info p {
+  color: whitesmoke;
+  font-size: 12px;
+  line-height: 1.5;
+}
+footer .brand .phone, footer .brand .email {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  float: left;
+}
+footer .brand .phone a, footer .brand .email a {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer .brand .phone a:hover, footer .brand .email a:hover {
+  color: white;
+}
+footer .brand .phone {
+  margin-top: 20px;
+  font-weight: bold;
+}
+footer .brand .email {
+  margin-bottom: 20px;
+}
+footer ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px 0 0;
+  list-style-type: none;
+  clear: left;
+}
+footer ul li {
+  width: 20%;
+  text-align: center;
+}
+footer ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+footer ul li a:hover {
+  color: white;
+}
+footer .copyright {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 10px 0;
+  font-size: 11px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  background-color: #21282d;
+}
+
+.niv {font-size:1.5em;}
+</style>
+<body>
+
+<div class="page-menu-bar">
+  <ul class="res-menu" style="position: fixed;top:0;left: 23vw;">
+    <li class="res-menu-link"><a href="#about">ABOUT</a></li>
+    <li class="res-menu-link"><a href="#purpose">NEWS</a></li>
+    <li class="res-menu-link"><a href="#schedule">SCHEDULE</a></li>
+    <li class="res-menu-link"><a href="#youtube">YOUTUBE</a></li>
+    <li class="res-menu-link"><a href="#contact">FAQ</a></li>
+     <li class="res-menu-link"><a href="#contact">CONTACT</a></li>
+  </ul>
+  <ul class="page-menu">
+    <li class="menu-link"><a class="link-a" href="#about">ABOUT</a></li>
+    <li class="menu-link"><a class="link-b" href="#purpose">NEWS</a></li>
+    <li class="menu-link"><a class="link-c" href="#schedule">SCHEDULE</a></li>
+    <li class="menu-link"><a class="link-d" href="#contact">YOUTUBE</a></li>
+    <li class="menu-link"><a class="link-d" href="#contact">FAQ</a></li>
+    <li class="menu-link"><a class="link-d" href="#contact">CONTACT</a></li>
+  </ul>
+  <div class="res-menu-button" style="position: absolute;margin-left: 87vw;">
+    &equiv;
+  </div>
+</div>
+
+<div class="grid" style="padding-top: 0;">
+  <header class="col-3">
+    <div class="container">
+      <div class="text"><h1 style="color: #fff;">THIS BE A BEAUTIFUL BLOG</h1></div>
+      <div class="text"></div>
+      <div class="btn">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </div>
+    </div>
+  </header>
+  <main class="col-2 group">
+    <!-- <h2>Welcome!</h2> -->
+    <section>
+      <div class="container">
+        <article>
+          <div class="img art-1" style="height: 300px;background-image: url(https://pixel.nymag.com/imgs/daily/intelligencer/2017/09/08/08-daca-dreamer.w710.h473.jpg);">
+           
+          </div>
+          <h3>Article #1</h3>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <div class="info">
+            <div class="date">
+              <span>
+                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                August 1st, 2017
+              </span>
+            </div>
+            <div class="more">
+              <a href="#">
+                More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <article>
+          <div class="img art-1">
+            <i class="fa fa-picture-o" aria-hidden="true"></i>
+          </div>
+          <h3>Article #2</h3>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <div class="info">
+            <div class="date">
+              <span>
+                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                August 1st, 2017
+              </span>
+            </div>
+            <div class="more">
+              <a href="#">
+                More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <article>
+          <div class="img art-1">
+            <i class="fa fa-picture-o" aria-hidden="true"></i>
+          </div>
+          <h3>Article #3</h3>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <div class="info">
+            <div class="date">
+              <span>
+                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                August 1st, 2017
+              </span>
+            </div>
+            <div class="more">
+              <a href="#">
+                More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <article>
+          <div class="img art-1">
+            <i class="fa fa-picture-o" aria-hidden="true"></i>
+          </div>
+          <h3>Article #4</h3>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <div class="info">
+            <div class="date">
+              <span>
+                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                August 1st, 2017
+              </span>
+            </div>
+            <div class="more">
+              <a href="#">
+                More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <aside class="col-1">
+    <h2>Aside</h2>
+    <div class="container">
+      <div class="box">
+        AD
+      </div>
+      <div class="box">
+        AD
+      </div>
+      <div class="box">
+        AD
+      </div>
+      <div class="box">
+        AD
+      </div>
+    </div>
+  </aside>
+  <footer class="col-3">
+    <div class="container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="contact-info">
+          <p>Your Company Name, Inc.<br>
+            123 Any Street NW<br>
+            Anytown, SD 57201<!-- <br>
+            123.456.7890 --></p>
+        </div>
+        <div class="phone">
+          <a href="#">1.420.867.5309</a>
+        </div>
+        <div class="email">
+          <a href=#"">you@yourcompany.com</a>
+        </div>
+      </div>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="copyright">
+      Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      Your Company
+    </div>
+  </footer>
+</div>  
+
+
+<div id="bgimg1"></div>
+ 
+ <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+
+<script>$(function() {
+  $("a[href*=#]:not([href=#])").click(function() {
+    if (
+      location.pathname.replace(/^\//, "") ==
+      this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      if (target.length) {
+        $("html,body").animate(
+          {
+            scrollTop: target.offset().top
+          },
+          1000
+        );
+        return false;
+      }
+    }
+  });
+});
+
+$(function() {
+  $(".res-menu-button").click(function() {
+    if ($(".res-menu").css("display") != "none") {
+      $(".res-menu").slideUp(1000);
+    } else {
+      $(".res-menu").slideDown(1000);
+    }
+  });
+});
+
+$(function() {
+  $(".form-submit").mousedown(function() {
+    $(".form-submit").addClass("pressed");
+  });
+  $(".form-submit").mouseup(function() {
+    $(".form-submit").removeClass("pressed");
+  });
+});
+
+$(window).scroll(function() {
+  var scrollPos = $(window).scrollTop(),
+      aboutPos = $(".about-wrapper").offset().top,
+      servicePos = $(".services-wrapper").offset().top,
+      productPos = $(".products-wrapper").offset().top,
+      contactPos = $(".contact-wrapper").offset().top;
+
+  if (scrollPos >= aboutPos && scrollPos < servicePos) {
+    $(".link-a").addClass("selected");
+  } else {
+    $(".link-a").removeClass("selected");
+  }
+
+  if (scrollPos >= servicePos && scrollPos < productPos) {
+    $(".link-b").addClass("selected");
+  } else {
+    $(".link-b").removeClass("selected");
+  }
+
+  if (scrollPos >= productPos && scrollPos < contactPos) {
+    $(".link-c").addClass("selected");
+  } else {
+    $(".link-c").removeClass("selected");
+  }
+
+  if (scrollPos >= contactPos) {
+    $(".link-d").addClass("selected");
+  } else {
+    $(".link-d").removeClass("selected");
+  }
+});
+</script>
+
+
+  <script>// Sticky nav
+var stickyNav = $('nav').offset().top;
+$(window).scroll(function () {
+    if ($(window).scrollTop() > stickyNav) {
+        $('nav').addClass('sticky');
+    } else {
+        $('nav').removeClass('sticky');
+    }
+});</script>
+</body>
+</html>
